@@ -32,3 +32,36 @@ body {
     width: 250px;
     height: auto;
 }
+
+/*style for full footer */
+footer {
+    position: fixed;
+    left: 150px;
+    right: 150px;
+    bottom: 5px;
+}
+
+
+
+/*style for socilamedia link button */
+
+.socialmedia_link {
+    position: fixed;
+    bottom: 41px;
+    margin: 20px 0;
+
+}
+
+.socialmedia_logo {
+    width: 30px;
+    height: auto;
+}
+
+ /*style for copyright */
+
+.copyright {
+    font-size:15px;
+    /*width:100%;*/
+    height: auto;
+    margin: 0 0 20px 0;
+}
