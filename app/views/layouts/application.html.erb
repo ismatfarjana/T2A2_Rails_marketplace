@@ -12,8 +12,16 @@
   <body>
     <header>
       <%= image_tag 'logo.png', class: 'main_logo' %>
-      <%= link_to "Log In", new_user_session_path, class: 'log_sign' %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <div class="sign_in_out">
+       <% if current_user %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'sign_log' %>
+       <% else %>
+
+        <%= link_to "Sign Up / Log In", new_user_session_path, class: 'sign_log' %>
+       <% end %>
+
+      </div>
+
       <%= render 'shared/header' %>
     </header>
 

@@ -47,12 +47,116 @@ body {
 
 
 /*login*/
-.log_sign {
+.sign_in_out {
+    display: flex;
+    flex-direction: row;
     position: fixed;
     top: 60px;
     right: 20px;
     font-size: 15px;
 }
+
+.sign_log {
+    padding: 0 10px;
+}
+.notice {
+    position: fixed;
+    top: 0px;
+
+}
+
+
+
+/*sign in form*/
+form#new_user {
+    background-color: #9cb51b;
+    margin: 0 5vw 1.5vw 5vw;
+    padding: 30px 0;
+}
+
+input {
+    width: 50vw;
+}
+
+input[type="submit"] {
+    background-color: RGB(0,104,138);
+    color: RGB(249,228,188);
+}
+
+.session {
+    padding: 10px;
+}
+
+
+/*profile form*/
+.profile_form {
+    border: 1px solid gray;
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+.label {
+    text-align: left;
+}
+.label#label {
+    padding-left: 20vw;
+}
+
+.add_or_edit_profile_form {
+    display: flex;
+    flex-direction: row;
+}
+
+.add_or_edit_profile_form_parts#profile_picture {
+    width: 5vw;
+    margin: 0 5vw;
+}
+.add_or_edit_profile_form_parts#profile_description {
+    padding: 0 10vw;
+    margin: 20px 0;
+}
+
+
+/*my profile page*/
+.my_profile_container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.my_profile_box {
+    margin: 0 30px;
+}
+
+.my_profile_box#profile_description {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.profile_description_box {
+    margin: 0 25px;
+}
+
+
+
+.edit_button {
+    border: 0.5px solid rgb(97, 160, 104);
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: rgb(247, 242, 187);
+    color: rgb(127, 185, 239);
+}
+
+.edit_button:hover {
+    color: rgb(247, 242, 187);
+    background-color: rgb(127, 185, 239);
+}
+
+
 
 
 

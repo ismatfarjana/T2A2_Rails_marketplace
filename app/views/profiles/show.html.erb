@@ -1,46 +1,65 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%#= notice %></p>-->
 
-<%= image_tag(@profile.picture, width: 200) if @profile.picture.attached? %>
+<div class="my_profile_container">
+  <div class="my_profile_box" id="profile_picture">
+    <%= image_tag(@profile.picture, width: 200) if @profile.picture.attached? %>
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
+  </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
+  <div class="my_profile_box" id="profile_description">
 
-<p>
-  <strong>Abn:</strong>
-  <%= @profile.abn %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</p>
+    <div class="profile_description_box">
+      <p>
+        <strong>First name:</strong>
+        <%= @profile.first_name %>
+      </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
+      <p>
+        <strong>Last name:</strong>
+        <%= @profile.last_name %>
+      </p>
 
-<p>
-  <strong>Postcode:</strong>
-  <%= @profile.postcode %>
-</p>
+      <p>
+        <strong>Abn:</strong>
+        <%= @profile.abn %>
+      </p>
+    </div>
 
-<p>
-  <strong>Mobile number:</strong>
-  <%= @profile.mobile_number %>
-</p>
+    <div class="profile_description_box">
 
-<p>
+      <p>
+        <strong>Address:</strong>
+        <%= @profile.address %>
+      </p>
+
+      <p>
+       <strong>State:</strong>
+       <%= @profile.state %>
+      </p>
+
+      <p>
+       <strong>Postcode:</strong>
+       <%= @profile.postcode %>
+      </p>
+
+      <p>
+        <strong>Mobile number:</strong>
+        <%= @profile.mobile_number %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @current_user.email %>
+      </p>
+    </div>
+    <p>
 <!--  <strong>User:</strong>-->
-  <% @profile.user_id %>
-</p>
+      <% @profile.user_id %>
+    </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %>
+  </div>
+</div>
+<%= link_to 'Edit Profile', edit_profile_path(@profile), class:'edit_button' %>
+
 
