@@ -33,6 +33,25 @@ body {
     height: auto;
 }
 
+/*banner picture style*/
+
+.banner {
+    box-sizing: border-box;
+}
+
+.banner_pic_single {
+    height: auto;
+    width: 33vw;
+    padding: 0;
+}
+
+/*navigation bar*/
+
+.navbar > .nav_link_wrapper > a {
+    margin: 0 1em;
+}
+
+
 /*style for full footer */
 footer {
     position: fixed;
