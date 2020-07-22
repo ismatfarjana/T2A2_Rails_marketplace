@@ -45,6 +45,17 @@ body {
     padding: 0;
 }
 
+
+/*login*/
+.log_sign {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    font-size: 15px;
+}
+
+
+
 /*navigation bar*/
 
 .navbar > .nav_link_wrapper > a {

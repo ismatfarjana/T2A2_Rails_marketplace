@@ -21,8 +21,16 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+#
+#
+#
+#
 #devise for log in
 gem 'devise', '~> 4.2'
+
+# fow aws s3 bucket
+gem "aws-sdk-s3", require: false
+
 
 
 # Use Active Storage variant

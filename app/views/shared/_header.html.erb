@@ -1,7 +1,14 @@
 <div class="navbar">
   <div class="nav_link_wrapper">
-    <a><%= link_to "Home", '/' %></a>
-    <a><%= link_to "About us", about_path %></a>
-    <a><%= link_to "Contact", contact_path %></a>
+    <%= link_to "Home", '/' %>
+    <%= link_to "Category", category_path %>
+    <%= link_to "About us", about_path %>
+    <%= link_to "Contact", contact_path %>
+    <% if @profile.present? && @profile.id.present? %>
+      <%= link_to "My Profile", profile_path(@profile) %>
+      <% elsif @user.present? %>
+      <%= link_to "Add Profile", new_profile_path %>
+     <% end %>
+
   </div>
 </div>
