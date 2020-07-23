@@ -29,12 +29,34 @@ body {
     box-sizing: inherit;
 }
 
+.all_heading {
+    margin: 70px 0 30px 0;
+    font-size: 25px;
+    color: darkgreen;
+}
+
 .main_logo {
     width: 250px;
     height: auto;
+    margin: 10px 0;
 }
 
-/*banner picture style*/
+/*insta banner picture style*/
+
+.insta_banner {
+    box-sizing: border-box;
+    margin: 40px 110px 70px 110px;
+    background-color: black;
+}
+
+.insta_pic_single {
+    height: auto;
+    width: 9vw;
+    padding: 0;
+}
+
+
+/*main banner */
 
 .banner {
     box-sizing: border-box;
@@ -45,6 +67,9 @@ body {
     width: 33vw;
     padding: 0;
 }
+
+
+
 
 
 /*login*/
@@ -165,6 +190,7 @@ input[type="submit"] {
 
 .navbar {
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 
@@ -264,6 +290,27 @@ input[type="submit"] {
 .one_category > a:link:hover {
     background-color: white;
 }
+
+
+
+
+.comunity_container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 30px 50px;
+    justify-content: center;
+
+}
+
+.one_member {
+    padding: 50px;
+
+}
+
+
+
+
 
 
 /*style for full footer */
