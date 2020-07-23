@@ -16,7 +16,7 @@ class MarketController < ApplicationController
 
   end
   def contact
-    
+
 
   end
 
@@ -26,6 +26,11 @@ class MarketController < ApplicationController
     @profile = Profile.where(user: current_user).first
     @user = current_user
   end
+
+  # def hold_product
+  #   @product = Product.where(seller_id: current_user.id).first
+  #   @user = current_user
+  # end
 
 
 end

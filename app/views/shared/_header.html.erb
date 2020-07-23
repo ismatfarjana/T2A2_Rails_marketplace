@@ -10,5 +10,11 @@
       <%= link_to "Add Profile", new_profile_path %>
      <% end %>
 
+    <% if @profile.present?  %>
+      <%= link_to "My Product", products_path %>
+    <% end %>
+
   </div>
 </div>
+
+<!--&& @product.id.present?-->
