@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-
+  <p>Upload one image of your product here:</p>
   <div class="field">
     <%= form.file_field :image %>
   </div>
@@ -26,11 +26,17 @@
     <%= form.text_field :category %>
   </div>
 
+  <p>Add the price in AUD</p>
   <div class="field">
     <%= form.label :price %>
     <%= form.number_field :price %>
   </div>
 
+  <p>Answer this questions about your product in the description:
+    <ul>
+      <li>How old is the seedling / plant?</li>
+    </ul>
+  </p>
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
