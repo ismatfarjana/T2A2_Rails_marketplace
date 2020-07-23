@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @profile = Profile.where(user: current_user).last
   end
 
   # GET /products/new
@@ -61,6 +62,18 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def category
+    category = params[:category]
+    @products = Product.where(category: category)
+    @profile = Profile.where(user: current_user).last
+  end
+
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'market#contact'
 
 
+  get '/categories/:category', to: 'products#category'
+
 end

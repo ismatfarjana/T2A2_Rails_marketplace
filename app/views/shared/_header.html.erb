@@ -1,7 +1,27 @@
 <div class="navbar">
   <div class="nav_link_wrapper">
     <%= link_to "Home", '/' %>
-    <%= link_to "Category", category_path %>
+
+
+
+    <div class="dropdown">
+      <div>Category</div>
+      <div class="dropdown-content">
+        <a href="/categories/seeds">Seeds</a>
+        <a href="/categories/seedlings">Seedlings</a>
+        <a href="/categories/smallplants">Small Plants</a>
+        <a href="/categories/flowers">Flowers</a>
+        <a href="/categories/fruits">Fruits</a>
+        <a href="/categories/indoorplants">Indoor Plants</a>
+        <a href="/categories/succulents">Succulents</a>
+        <a href="/categories/vegetables">Vegetables</a>
+        <a href="/categories/poultry">Poultry</a>
+
+      </div>
+    </div>
+
+
+
     <%= link_to "About us", about_path %>
     <%= link_to "Contact", contact_path %>
     <% if @profile.present? && @profile.id.present? %>
