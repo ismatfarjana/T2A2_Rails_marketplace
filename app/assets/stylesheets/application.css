@@ -201,27 +201,47 @@ input[type="submit"] {
     display: block;
 }
 
+/*main homepage category */
 
+.all_categories {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*one category list line*/
+
+
+.category_box_line {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/*each category item box image of home page*/
+
+.one_category {
+    height: auto;
+    width: 20vw;
+    padding: 10px 30px;
+    /*margin: 20px 10px;*/
+    justify-content: left;
+}
 
 
 
 /*style for full footer */
 footer {
-    position: fixed;
-    left: 150px;
-    right: 150px;
-    bottom: 5px;
+    height: 50px;
+    text-align: center;
 }
-
 
 
 /*style for socilamedia link button */
 
 .socialmedia_link {
-    position: fixed;
-    bottom: 41px;
     margin: 20px 0;
-
 }
 
 .socialmedia_logo {
@@ -233,7 +253,7 @@ footer {
 
 .copyright {
     font-size:15px;
-    /*width:100%;*/
     height: auto;
     margin: 0 0 20px 0;
+
 }
