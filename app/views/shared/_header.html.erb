@@ -5,7 +5,7 @@
 
 
     <div class="dropdown">
-      <div>Category</div>
+      <div>Categories</div>
       <div class="dropdown-content">
         <a href="/categories/seeds">Seeds</a>
         <a href="/categories/seedlings">Seedlings</a>
@@ -22,8 +22,7 @@
 
 
 
-    <%= link_to "About us", about_path %>
-    <%= link_to "Contact", contact_path %>
+
     <% if @profile.present? && @profile.id.present? %>
       <%= link_to "My Profile", profile_path(@profile) %>
       <% elsif @user.present? %>
@@ -33,6 +32,10 @@
     <% if @profile.present?  %>
       <%= link_to "My Product", products_path %>
     <% end %>
+
+
+    <%= link_to "About us", about_path %>
+    <%= link_to "Contact", contact_path %>
 
   </div>
 </div>
