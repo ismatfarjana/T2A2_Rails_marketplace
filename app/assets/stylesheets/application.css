@@ -44,14 +44,16 @@ body {
 /*insta banner picture style*/
 
 .insta_banner {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    /*display: flex;*/
+    /*flex-wrap: nowrap;*/
     margin: 40px 110px 70px 110px;
     background-color: black;
 }
 
 .insta_pic_single {
     height: auto;
-    width: 9vw;
+    width: 8vw;
     padding: 0;
 }
 
@@ -260,7 +262,7 @@ input[type="submit"] {
 .category_box_line {
     display: flex;
     flex-direction: column;
-
+    padding: 0 5px;
 
 }
 
@@ -269,13 +271,30 @@ input[type="submit"] {
 .one_category {
     height: auto;
     width: 20vw;
-    padding: 10px 30px;
+    padding: 10px 0px;
+    margin-bottom: 25px;
+    justify-content: left;
+}
+
+.one_category_image {
+    height: auto;
+    width: 20vw;
+    padding: 10px 5px;
     /*margin: 20px 10px;*/
     justify-content: left;
 }
 
-.one_category > p {
+.one_category > a > h3 {
     margin: 0;
+    border: 1px solid darkgreen;
+    border-top: 0;
+    padding: 10px 0;
+    margin: 0 5px;
+}
+
+.one_category > a > h3:hover {
+    background-color: RGB(186,240,112);
+    color: RGB(49,40,83);
 }
 
 .one_category > a {
