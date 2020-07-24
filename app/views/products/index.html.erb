@@ -4,13 +4,15 @@
 
 <div class="one_category_page">
   <% @products.each do |product| %>
+
+    <%= link_to(edit_product_path(product)) do %>
+      <%= image_tag 'editbutton.png', class: 'control_image_button', title: 'Edit Product' %>
+    <% end %>
+
     <%= link_to(product) do %>
       <div class="one_category_each_product">
         <div class="product_access_button">
 
-          <%= link_to(edit_product_path(product)) do %>
-            <%= image_tag 'editbutton.png', class: 'control_image_button' %>
-          <% end %>
         </div>
         <div class="one_category_each_product_image">
           <%= image_tag(product.image, width: 200, height: 200) %>
@@ -39,7 +41,6 @@
          
         </div>
       </div>
-
     <% end %>
 
   <% end %>
