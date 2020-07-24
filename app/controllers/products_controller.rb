@@ -65,8 +65,8 @@ class ProductsController < ApplicationController
 
 
   def category
-    category = params[:category]
-    @products = Product.where(category: category)
+    @category = params[:category]
+    @products = Product.where(category: @category)
     @profile = Profile.where(user: current_user).last
   end
 

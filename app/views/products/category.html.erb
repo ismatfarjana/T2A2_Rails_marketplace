@@ -1,13 +1,19 @@
 
-<%#= @products.category %>
+<div class="all_heading"><%= @category.upcase  %></div>
 <div class="one_category_page">
   <% @products.each do |product| %>
-    <%= image_tag(product.image, width: 200) %><br />
-    <%= product.title %><br />
-    AUD$ <%= product.price %><br />
-    Category: <%= product.category %><br />
-    <%= link_to 'Show', product %><br />
-   <%#= link_to 'Edit', edit_product_path(product) %>
-  <!--  <%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br /><br />-->
+    <div class="one_category_each_product">
+      <div class="one_category_each_product_image"><%= image_tag(product.image, width: 200) %></div>
+      <%= product.title %><br />
+      AUD$ <%= product.price %><br />
+      Category: <%= product.category %><br />
+      <%= link_to 'Show', product %><br />
+    </div>
   <% end %>
-</div>  
+</div>
+
+
+
+<%#= @products.category %>
+<%#= link_to 'Edit', edit_product_path(product) %>
+<!--  <%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><br /><br />-->

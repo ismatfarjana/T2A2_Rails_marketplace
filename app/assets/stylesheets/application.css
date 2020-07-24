@@ -313,6 +313,29 @@ input[type="submit"] {
 
 
 
+/*one category page*/
+
+.one_category_page {
+    margin: 50px 0;
+    display: flex;
+   justify-content: center;
+    max-height: 100%;
+}
+
+.one_category_each_product {
+    margin: 20px 0;
+}
+
+.one_category_each_product_image {
+    height: 200px;
+    margin: 0px 20px 10px 20px;
+}
+
+
+
+
+/*community page*/
+
 
 .comunity_container {
     display: flex;
