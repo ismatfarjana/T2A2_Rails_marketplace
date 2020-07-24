@@ -387,7 +387,7 @@ label {
     /* height: 30px; */
     text-align: center;
     padding: 10px 0;
-    
+
 }
 
 .one_button:hover {
@@ -399,6 +399,39 @@ label {
     text-decoration: none;
 
 }
+
+/*each product showing page */
+
+.each_product_show {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    margin: 140px 0;
+}
+
+.each_product_show_box {
+    /*margin: 0 80px;*/
+    text-align: left;
+
+}
+.each_product_show_box_parts {
+    margin-top: 20px;
+}
+
+.each_product_show_box_parts > h3 {
+    margin: 0;
+}
+
+
+
+
+/*control_image_button for edit or deleting product*/
+.control_image_button {
+    width: 30px;
+    height: auto;
+}
+
+
 
 
 /*community page*/

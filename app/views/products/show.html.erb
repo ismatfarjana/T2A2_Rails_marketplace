@@ -1,14 +1,46 @@
+
+<%= render 'shared/banner' %>
+<div class="each_product_show">
+  <div class="each_product_show_box">
+    <%= image_tag(@product.image, width: 400, height: 400) %>
+  </div>
+  <div class="each_product_show_box">
+    <div class="each_product_show_box_parts">
+      <% if @product.title.present? %>
+        <h1><%= @product.title.capitalize %></h1>
+     <% else %>
+        <h1>Tile Required</h1>
+      <% end %><br />
+    </div>
+    <div class="each_product_show_box_parts">
+      <% if @product.category.present? %>
+        <h3><%= @product.category.capitalize %></h3>
+      <% else %>
+        Category Required
+      <% end %><br />
+      <% if @product.price.present? %>
+        <strong>AUD$</strong><%= @product.price %>
+      <% else %>
+        Price Required
+      <% end %><br />
+    </div>
+    <div class="each_product_show_box_parts">
+      <% if @product.description.present? %>
+        <%= @product.description %>
+      <% else %>
+        Product Description Required
+      <% end %><br />
+    </div>
+
+    <h4>Seller name <%=  @product.seller.profile.first_name %></h4>
+
+  </div>
+
+
+</div>
+
+
 <p id="notice"><%= notice %></p>
-
-
-
-<%= image_tag(@product.image, width: 200, height: 200) %>
-<%= @product.title %>
-<%= @product.category %>
-<strong>AUD$</strong><%= @product.price %>
-<%= @product.description %>
-
-
 
 
 
