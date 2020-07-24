@@ -9,9 +9,18 @@ People who has contributed to our community
 
       <% @profiles.each do |profile| %>
        <div class="one_member">
-        <%= image_tag(profile.picture, width: 200) if @profile.picture.attached? %><br />
-        Name: <%= profile.first_name %> <br />
-        Location: <%= profile.state %>| <%= profile.postcode %><br/>
+         <div class="one_member_picture">
+          <%= image_tag(profile.picture, width: 200, height: 200) if @profile.picture.attached? %><br />
+         </div>
+         <div class="one_member_description">
+            Name: <%= profile.first_name %> <br />
+          <% if profile.state.present? %>
+              State: <%= profile.state  %>
+           <% else  %>
+              State: Not Added
+          <% end %><br />
+            Postcode: <%= profile.postcode %><br/>
+         </div>
        </div>
       <% end %>
 

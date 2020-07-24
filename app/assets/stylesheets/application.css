@@ -22,6 +22,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     margin-bottom: 10px;
+    color: darkslategrey;
 
 }
 
@@ -32,7 +33,7 @@ body {
 .all_heading {
     margin: 70px 0 30px 0;
     font-size: 25px;
-    color: darkgreen;
+
 }
 
 .main_logo {
@@ -98,18 +99,29 @@ body {
 
 /*sign in form*/
 form#new_user {
-    background-color: #9cb51b;
-    margin: 0 5vw 1.5vw 5vw;
-    padding: 30px 0;
+    background-color: RGB(241,244,185);
+    margin: auto;
+    padding: 50px 0;
+    width: 600px;
+    height: auto;
+}
+
+input#user_email {
+    width: 400px;
+
 }
 
 input {
-    width: 50vw;
+    width: 400px;
+    height: 30px;
+    margin-top: 7px;
 }
 
 input[type="submit"] {
     background-color: RGB(0,104,138);
     color: RGB(249,228,188);
+    height: 30px;
+    font-size: 20px;
 }
 
 .session {
@@ -125,11 +137,14 @@ input[type="submit"] {
     margin-top: 50px;
     padding: 20px 0;
 }
-.label {
+label {
     text-align: left;
+    padding-left: 100px;
+    font-size: 20px;
 }
 .label#label {
-    padding-left: 20vw;
+    padding-left: 100px;
+    font-size: 20px;
 }
 
 .add_or_edit_profile_form {
@@ -228,6 +243,8 @@ input[type="submit"] {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    font-size: 20px;
+    text-align: left;
 }
 
 
@@ -324,12 +341,31 @@ input[type="submit"] {
 
 .one_category_each_product {
     margin: 20px 0;
+    font-size: 15px;
+
 }
 
 .one_category_each_product_image {
     height: 200px;
     margin: 0px 20px 10px 20px;
+
 }
+
+.one_category_each_product_description_1 {
+      margin: 0px 20px;
+      text-align: right;
+      margin-bottom: 10px;
+  }
+.one_category_each_product_description_2 {
+    margin: 0px 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.one_category_each_product_description_1 > h2 {
+    margin-bottom: 5px;
+}
+
 
 
 
@@ -348,7 +384,12 @@ input[type="submit"] {
 
 .one_member {
     padding: 50px;
+    text-align: left;
+    font-size: 15px;
+}
 
+.one_member > .one_member_description {
+    margin-top: 10px;
 }
 
 

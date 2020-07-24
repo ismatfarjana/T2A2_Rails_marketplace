@@ -2,7 +2,7 @@
 
 <div class="my_profile_container">
   <div class="my_profile_box" id="profile_picture">
-    <%= image_tag(@profile.picture, width: 200) if @profile.picture.attached? %>
+    <%= image_tag(@profile.picture, width: 200, height: 200) if @profile.picture.attached? %>
 
   </div>
 
