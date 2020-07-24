@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
 
-<%= image_tag(@product.image, width: 200) %>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+<%= image_tag(@product.image, width: 200, height: 200) %>
+<%= @product.title %>
+<%= @product.category %>
+<strong>AUD$</strong><%= @product.price %>
+<%= @product.description %>
 
-<p>
-  <strong>AUD$</strong>
-  <%= @product.price %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
 
-<p>
-<!--  <strong>Seller:</strong>-->
-  <% @product.seller_id %>
-</p>
 
-<!--<%#= link_to 'Edit', edit_product_path(@product) %> |-->
-<%#= link_to 'Back to My Product', products_path %>
+
+
+
+<!--<div class="product_access_button">-->
+<!--  <div class="one_button">-->
+    <%#= link_to 'Edit Product', edit_product_path(product) %>
+<!--  </div>-->
+<!--  <div class="one_button">-->
+    <%#= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+<!--  </div>-->
+<!--</div>-->
+
+

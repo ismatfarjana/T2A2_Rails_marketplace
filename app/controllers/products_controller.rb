@@ -71,6 +71,14 @@ class ProductsController < ApplicationController
   end
 
 
+  def sellers_product_list
+    seller_id = params[:seller_id]
+    @products = Product.where(seller_id: seller_id)
+    @profile = Profile.where(user: current_user).last
+    @seller_name = Profile.where(user_id: seller_id).first.first_name
+  end
+
+
 
 
 

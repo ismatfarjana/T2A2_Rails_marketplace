@@ -21,7 +21,9 @@ People who has contributed to our community
           <% end %><br />
             Postcode: <%= profile.postcode %><br/>
          </div>
+         <%= link_to 'View Products', sellers_product_list_path(profile.user) %>
        </div>
+
       <% end %>
 
 

@@ -1,0 +1,26 @@
+<% @products.each do |product| %>
+  <%= link_to(product) do %>
+    <div class="one_category_each_product">
+      <div class="one_category_each_product_image">
+        <%= image_tag(product.image, width: 200, height: 200) %>
+      </div>
+      <div class="one_category_each_product_description_1">
+        <% if product.title.present? %>
+          <h2><%= product.title.capitalize %></h2>
+        <% else %>
+          <h2>Tile Required</h2>
+        <% end %>
+        <% if product.category.present? %>
+          <h4><%= product.category.capitalize %></h4>
+        <% else %>
+          Category Required
+        <% end %>
+        <% if product.price.present? %>
+          AUD$<%= product.price %>
+        <% else %>
+          Price Required
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

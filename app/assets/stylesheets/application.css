@@ -30,6 +30,11 @@ body {
     box-sizing: inherit;
 }
 
+a {
+    text-decoration: none;
+    color: darkslategray;
+}
+
 .all_heading {
     margin: 70px 0 30px 0;
     font-size: 25px;
@@ -355,6 +360,7 @@ label {
       margin: 0px 20px;
       text-align: right;
       margin-bottom: 10px;
+    text-decoration: none;
   }
 .one_category_each_product_description_2 {
     margin: 0px 20px;
@@ -367,7 +373,32 @@ label {
 }
 
 
+/*access to sellers product*/
 
+.product_access_button {
+    margin: 0 20px;
+}
+
+
+.one_button {
+    border: 1px solid darkslategrey;
+    border-top: 0;
+    margin: 8px 0px;
+    /* height: 30px; */
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.one_button:hover {
+    background-color: RGBA(217,250,167,0.48);
+}
+
+
+.one_button > a {
+    text-decoration: none;
+
+}
 
 
 /*community page*/
@@ -393,6 +424,39 @@ label {
 }
 
 
+
+
+/*contact us form*/
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/*input[type=submit] {*/
+/*    background-color: #4CAF50;*/
+/*    color: white;*/
+/*    padding: 12px 20px;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*input[type=submit]:hover {*/
+/*    background-color: #45a049;*/
+/*}*/
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 
 
 

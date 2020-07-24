@@ -1,23 +1,7 @@
 
 <div class="all_heading"><%= @category.upcase  %></div>
 <div class="one_category_page">
-  <% @products.each do |product| %>
-    <div class="one_category_each_product">
-      <div class="one_category_each_product_image"><%= image_tag(product.image, width: 200, height: 200) %></div>
-      <div class="one_category_each_product_description_1">
-        <h2><%= product.title.capitalize %></h2>
-        <% if product.price.present? %>
-          AUD $<%= product.price %><br />
-          <% else %>
-          Price not Added
-         <% end %>
-      </div>
-      <div class="one_category_each_product_description_2">
-        <h3>Category: <%= product.category %></h3>
-        <%= link_to 'More Details', product %>
-      </div>
-    </div>
-  <% end %>
+  <%= render 'shared/product' %>
 </div>
 
 
