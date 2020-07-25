@@ -363,7 +363,7 @@ label {
 /*one category page*/
 
 .one_category_page {
-    margin: 50px 0;
+    margin: 50px 20px;
     display: flex;
    justify-content: center;
     max-height: 100%;
@@ -371,7 +371,7 @@ label {
 }
 
 .one_category_each_product {
-    margin: 20px 0;
+    margin: 20px 5px;
     font-size: 15px;
 
 }
@@ -384,13 +384,13 @@ label {
 
 .one_category_each_product_description_1 {
       margin: 0px 20px;
-      text-align: right;
+      text-align: left;
       margin-bottom: 10px;
     text-decoration: none;
   }
 .one_category_each_product_description_2 {
     margin: 0px 20px;
-    text-align: left;
+    text-align: right;
     font-size: 15px;
 }
 
@@ -402,7 +402,18 @@ label {
 /*access to sellers product*/
 
 .product_access_button {
-    margin: 0 20px;
+    margin: 0;
+    background-color: floralwhite;
+    height: 30px;
+    padding-top: 6px;
+    margin-bottom: 5px;
+}
+
+
+.product_access_button:hover {
+    background-color: RGBA(255,60,0,0.86);
+
+
 }
 
 
@@ -473,8 +484,9 @@ label {
 
 /*control_image_button for edit or deleting product*/
 .control_image_button {
-    width: 20px;
+    width: 10px;
     height: auto;
+    margin: 0;
 }
 
 

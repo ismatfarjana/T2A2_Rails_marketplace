@@ -7,18 +7,15 @@
 <div class="one_category_page">
   <% @products.each do |product| %>
 
-    <%= link_to(edit_product_path(product)) do %>
-      <%= image_tag 'editbutton.png', class: 'control_image_button', title: 'Edit Product' %>
-    <% end %>
 
     <%= link_to(product) do %>
       <div class="one_category_each_product">
-        <div class="product_access_button">
 
-        </div>
         <div class="one_category_each_product_image">
           <%= image_tag(product.image, width: 200, height: 200) %>
         </div>
+
+
         <div class="one_category_each_product_description_1">
           <% if product.title.present? %>
             <h3><%= product.title.capitalize %></h3>
@@ -29,21 +26,30 @@
             <h4><%= product.category.capitalize %></h4>
           <% else %>
             Category Required
-          <% end %>
+          <% end %><br />
+
           <% if product.price.present? %>
             AUD$<%= product.price %>
           <% else %>
             Price Required
           <% end %>
         </div>
+
+
         <div class="product_access_button">
 
             <%= image_tag 'deeletebutton.png', class: 'control_image_button' %>
             <%= link_to 'Delete product?', product, method: :delete, data: { confirm: 'Are you sure?' } %>
          
         </div>
+
+        <div class="product_access_button">
+          <%= image_tag 'editbutton.png', class: 'control_image_button' %>
+          <%= link_to 'Edit Product', edit_product_path(product), class:'control_image_button' %>
+        </div>
       </div>
     <% end %>
+
 
   <% end %>
 
