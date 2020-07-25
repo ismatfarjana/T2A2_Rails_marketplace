@@ -65,6 +65,31 @@ a {
 }
 
 
+/*promote row*/
+.promote_row {
+    display: flex;
+    flex-direction: column;
+    /*width: 200px;*/
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.promote_row > a:hover {
+    background-color: coral;
+    color: white;
+}
+
+.promote_banner {
+    margin: auto;
+
+}
+
+.promote_pic_single {
+    height: 200px;
+
+}
+
+
 /*main banner */
 
 .banner {
