@@ -20,6 +20,8 @@ class MarketController < ApplicationController
 
   end
 
+
+
   private
 
   def hold_profile

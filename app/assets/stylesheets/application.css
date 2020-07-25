@@ -481,8 +481,16 @@ input[type=text], select, textarea {
     margin: 100px;
 }
 
-
-
+.submitbutton {
+    width: 90px;
+    background-color: coral;
+    height: 30px;
+    padding-top: 7px;
+}
+.submitbutton:hover {
+    background-color: cornflowerblue;
+    color: darkslategray;
+}
 
 /*style for full footer */
 footer {

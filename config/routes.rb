@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   get '/products/seller/:seller_id', to: 'products#sellers_product_list', as: 'sellers_product_list'
 
+
+
 end
