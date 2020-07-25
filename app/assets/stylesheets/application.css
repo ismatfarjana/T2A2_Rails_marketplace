@@ -492,6 +492,53 @@ input[type=text], select, textarea {
     color: darkslategray;
 }
 
+
+
+.new_product_form {
+    background-color: lightgoldenrodyellow;
+    width: 800px;
+    height: 680px;
+    padding: 100px 0px ;
+    margin: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+
+
+}
+
+.new_product_form_parts {
+    padding: 0 40px;
+    width: 400px;
+}
+
+
+
+.form_parts, input#product_price {
+    width: 300px;
+
+}
+
+input#product_price, input#product_title, select#product_category {
+    height: 50px;
+}
+
+
+
+textarea#product_description {
+    height: 80px;
+}
+
+.new_product_form > h3, h4 {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
 /*style for full footer */
 footer {
     height: 50px;

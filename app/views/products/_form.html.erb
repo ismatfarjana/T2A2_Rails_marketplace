@@ -11,44 +11,80 @@
     </div>
   <% end %>
 
-  <p>Upload one image of your product here:</p>
-  <div class="field">
-    <%= form.file_field :image %>
+
+
+
+
+  <div class="new_product_form">
+    <div class="new_product_form_parts" id="part2">
+      <div class="form_parts">
+        <h4>Upload product image </h4>
+        <%= form.file_field :image %>
+
+      </div>
+    </div>
+
+    <div class="new_product_form_parts" id="part1">
+      <div class="form_parts">
+        <h3>Name of the product </h3>
+        <%= form.text_field :title %>
+      </div>
+
+      <div class="form_parts">
+        <h4>Category </h4>
+        <%= form.select(:category, [['Flowers', 'flowers'], ['Fruits', 'fruits'], ['Vegetables', 'vegetables'], ['Seeds', 'seeds'], ['Seedlings', 'seedlings'], ['Small Plants', 'smallplants'], ['Indoor Plants', 'indoorplants'], ['Succulents', 'succulents'], ['Garden Tools', 'gardentools'], ['Terrariums', 'terrariums']]) %>
+      </div>
+      <div class="form_parts">
+        <h4>Add Price</h4>
+        <%= form.number_field :price %>
+      </div>
+      <div class="form_parts">
+        <h4>Describe the product</h4>
+        <%= form.text_area :description %>
+      </div>
+        <%= form.submit %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%#= form.text_field :category %>
-    <%= form.select(:category, [['Flowers', 'flowers'], ['Fruits', 'fruits'], ['Vegetables', 'vegetables'], ['Seeds', 'seeds'], ['Seedlings', 'seedlings'], ['Small Plants', 'smallplants'], ['Indoor Plants', 'indoorplants'], ['Succulents', 'succulents'], ['Garden Tools', 'gardentools'], ['Terrariums', 'terrariums']]) %>
-  </div>
 
-  <p>Add the price in AUD</p>
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
+<!--  <div class="field">-->
+    <%#= form.file_field :image %>
+<!--  </div>-->
 
-  <p>Answer this questions about your product in the description:
-    <ul>
-      <li>How old is the seedling / plant?</li>
-    </ul>
-  </p>
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+<!--  <div class="field">-->
+    <%#= form.label :title %>
+    <%#= form.text_field :title %>
+<!--  </div>-->
 
-  <div class="field">
-    <% form.label :seller_id %>
-    <% form.text_field :seller_id %>
-  </div>
+<!--  <div class="field">-->
+    <%#= form.label :category %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%#= form.select(:category, [['Flowers', 'flowers'], ['Fruits', 'fruits'], ['Vegetables', 'vegetables'], ['Seeds', 'seeds'], ['Seedlings', 'seedlings'], ['Small Plants', 'smallplants'], ['Indoor Plants', 'indoorplants'], ['Succulents', 'succulents'], ['Garden Tools', 'gardentools'], ['Terrariums', 'terrariums']]) %>
+<!--  </div>-->
+
+<!--  <p>Add the price in AUD</p>-->
+<!--  <div class="field">-->
+    <%#= form.label :price %>
+    <%#= form.number_field :price %>
+<!--  </div>-->
+
+<!--  <p>Answer this questions about your product in the description:-->
+<!--    <ul>-->
+<!--      <li>How old is the seedling / plant?</li>-->
+<!--    </ul>-->
+<!--  </p>-->
+<!--  <div class="field">-->
+    <%#= form.label :description %>
+    <%#= form.text_area :description %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%# form.label :seller_id %>
+    <%# form.text_field :seller_id %>
+<!--  </div>-->
+
+<!--  <div class="actions">-->
+    <%#= form.submit %>
+<!--  </div>-->
 <% end %>
