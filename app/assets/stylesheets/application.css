@@ -342,6 +342,7 @@ label {
     display: flex;
    justify-content: center;
     max-height: 100%;
+    flex-wrap: wrap;
 }
 
 .one_category_each_product {
@@ -399,6 +400,26 @@ label {
     text-decoration: none;
 
 }
+
+
+/*add new*/
+.newproduct {
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    font-size: 20px;
+    border: 1px solid darkslategrey;
+    padding-top: 10px;
+}
+
+.newproduct:hover {
+    background-color:greenyellow;
+    color: white;
+
+
+}
+
+
 
 /*each product showing page */
 

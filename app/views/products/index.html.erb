@@ -2,6 +2,8 @@
 
 <div class="all_heading">My Products</div>
 
+<div class="newproduct"><%= link_to ' Add A New Product', new_product_path %></div>
+
 <div class="one_category_page">
   <% @products.each do |product| %>
 
@@ -19,9 +21,9 @@
         </div>
         <div class="one_category_each_product_description_1">
           <% if product.title.present? %>
-            <h2><%= product.title.capitalize %></h2>
+            <h3><%= product.title.capitalize %></h3>
           <% else %>
-            <h2>Tile Required</h2>
+            <h3>Tile Required</h3>
           <% end %>
           <% if product.category.present? %>
             <h4><%= product.category.capitalize %></h4>
@@ -53,5 +55,5 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+
 
