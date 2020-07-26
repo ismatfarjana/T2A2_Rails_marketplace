@@ -1,26 +1,47 @@
 <% @products.each do |product| %>
-  <%= link_to(product) do %>
-    <div class="one_category_each_product">
-      <div class="one_category_each_product_image">
-        <%= image_tag(product.image, width: 200, height: 200) %>
+  <div class="add_cart_to_each_product_of_category_page">
+
+    <%= link_to(product) do %>
+      <div class="one_category_each_product">
+        <div class="one_category_each_product_image">
+          <%= image_tag(product.image, width: 200, height: 200) %>
+        </div>
+        <div class="one_category_each_product_description_1">
+          <% if product.title.present? %>
+            <h3><%= product.title.capitalize %></h3>
+          <% else %>
+            <h3>Tile Required</h3>
+          <% end %>
+          <% if product.category.present? %>
+           <h4><%= product.category.capitalize %></h4>
+          <% else %>
+           Category Required
+          <% end %>
+          <% if product.price.present? %>
+           AUD$<%= product.price %>
+          <% else %>
+           Price Required
+          <% end %>
+
+          <h4>Seller: <%=  product.seller.profile.first_name %></h4>
+        </div>
       </div>
-      <div class="one_category_each_product_description_1">
-        <% if product.title.present? %>
-          <h3><%= product.title.capitalize %></h3>
-        <% else %>
-          <h3>Tile Required</h3>
-        <% end %>
-        <% if product.category.present? %>
-          <h4><%= product.category.capitalize %></h4>
-        <% else %>
-          Category Required
-        <% end %>
-        <% if product.price.present? %>
-          AUD$<%= product.price %>
-        <% else %>
-          Price Required
-        <% end %>
+
+    <% end %>
+
+
+
+    <%= form_with(model: @cart, local: true) do |form| %>
+
+
+      <div class="field" style="visibility: hidden">
+        <%= form.label :product_id %>
+        <%= form.text_field :product_id, :value => product.id %>
       </div>
-    </div>
-  <% end %>
+
+      <div class="actions">
+       <%= form.submit 'Add to Cart' %>
+      </div>
+    <% end %>
+  </div>
 <% end %>

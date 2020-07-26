@@ -165,7 +165,9 @@ input[type="submit"] {
     color: RGB(249,228,188);
     height: 30px;
     font-size: 20px;
+    width: 190px;
 }
+
 
 .session {
     padding: 10px;
@@ -201,7 +203,7 @@ label {
 }
 
 .add_or_edit_profile_form_parts#profile_picture {
-    width: 400px;
+    width: 200px;
     margin: 50px 5px;
     padding: 80px 60px;
 }
@@ -421,22 +423,41 @@ tbody.cart_body {
 /*one category page*/
 
 .one_category_page {
-    margin: 50px 20px;
+    margin: 50px 20px 80px 20px;
     display: flex;
    justify-content: center;
     max-height: 100%;
     flex-wrap: wrap;
 }
 
-.one_category_each_product {
-    margin: 20px 5px;
-    font-size: 15px;
+.add_cart_to_each_product_of_category_page {
+    margin: 0 20px;
+    width: 200px;
 
+}
+
+
+.one_category_each_product {
+    margin: 20px 0px;
+    font-size: 15px;
+    width: 200px;
+}
+
+
+
+.one_category_page#allofmyproduct {
+    margin: 50px;
+}
+
+
+.one_category_each_product#myproduct {
+    margin: 20px;
 }
 
 .one_category_each_product_image {
     height: 200px;
-    margin: 0px 20px 10px 20px;
+    width: 200px;
+    margin: 0px 20px 10px 0px;
 
 }
 

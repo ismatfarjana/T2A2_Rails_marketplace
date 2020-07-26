@@ -4,12 +4,12 @@
 
 <div class="newproduct"><%= link_to ' Add A New Product', new_product_path %></div>
 
-<div class="one_category_page">
+<div class="one_category_page" id="allofmyproduct">
   <% @products.each do |product| %>
 
 
     <%= link_to(product) do %>
-      <div class="one_category_each_product">
+      <div class="one_category_each_product" id="myproduct">
 
         <div class="one_category_each_product_image">
           <%= image_tag(product.image, width: 200, height: 200) %>
