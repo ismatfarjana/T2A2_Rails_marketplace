@@ -39,6 +39,37 @@
 
 </div>
 
+<%= form_with(model: @cart, local: true) do |form| %>
+
+
+  <div class="field" style="visibility: hidden">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id, :value => @product.id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Add to Cart' %>
+  </div>
+<% end %>
+
+<!--<form action="/carts" accept-charset="UTF-8" method="post">-->
+
+<!--  <div class="field">-->
+<!--    <label for="cart_product_id">Product</label>-->
+<!--    <input type="text" name="cart[product_id]" id="cart_product_id">-->
+<!--  </div>-->
+
+<!--  <div class="field">-->
+<!--    <label for="cart_buyer_id">Buyer</label>-->
+<!--    <input type="text" name="cart[buyer_id]" id="cart_buyer_id">-->
+<!--  </div>-->
+
+<!--  <div class="actions">-->
+<!--    <input type="submit" name="commit" value="Create Cart" data-disable-with="Create Cart">-->
+<!--  </div>-->
+<!--</form>-->
+
+
 
 <p id="notice"><%= notice %></p>
 

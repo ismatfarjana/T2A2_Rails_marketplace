@@ -11,11 +11,7 @@
     </div>
   <% end %>
 <div class="add_or_edit_profile_form">
-  <div class="add_or_edit_profile_form_parts" id="profile_picture">
-    <div class="field">
-      <%= form.file_field :picture %>
-    </div>
-  </div>
+
 
   <div class="add_or_edit_profile_form_parts" id="profile_description">
     <div class="field">
@@ -53,6 +49,13 @@
       <%= form.text_field :mobile_number %>
     </div>
   </div>
+
+  <div class="add_or_edit_profile_form_parts" id="profile_picture">
+    <div class="field">
+      <%= form.file_field :picture %>
+    </div>
+  </div>
+
 </div>
 
 

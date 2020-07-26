@@ -125,6 +125,19 @@ a {
 
 }
 
+.loginstyle > label {
+   text-align: left;
+}
+
+input#user_remember_me {
+    width: 70px;
+}
+
+
+
+/*all kind of device form*/
+
+
 
 
 /*sign in form*/
@@ -162,14 +175,18 @@ input[type="submit"] {
 /*profile form*/
 .profile_form {
     border: 1px solid gray;
-    width: 80vw;
     margin: auto;
     margin-top: 50px;
     padding: 20px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background-color: RGBA(137,219,185,0.4);
 }
 label {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 0px;
     font-size: 20px;
 }
 .label#label {
@@ -180,15 +197,26 @@ label {
 .add_or_edit_profile_form {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .add_or_edit_profile_form_parts#profile_picture {
-    width: 5vw;
-    margin: 0 5vw;
+    width: 400px;
+    margin: 50px 5px;
+    padding: 80px 60px;
 }
+
+
+
+
 .add_or_edit_profile_form_parts#profile_description {
-    padding: 0 10vw;
+    padding: 0 10px;
     margin: 20px 0;
+
+}
+
+.add_or_edit_profile_form_parts#profile_description > .field {
+    width: 300px;
 }
 
 
@@ -446,7 +474,7 @@ label {
     font-size: 20px;
     border: 1px solid darkslategrey;
     padding-top: 10px;
-    
+
 }
 
 .newproduct:hover {

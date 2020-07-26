@@ -12,11 +12,13 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @profile = Profile.where(user: current_user).last
+    @cart = Cart.new
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    @profile = Profile.where(user: current_user).last
   end
 
   # GET /products/1/edit
