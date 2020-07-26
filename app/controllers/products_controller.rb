@@ -79,6 +79,7 @@ class ProductsController < ApplicationController
     @products = Product.where(seller_id: seller_id)
     @profile = Profile.where(user: current_user).last
     @seller_name = Profile.where(user_id: seller_id).first.first_name
+    @cart = Cart.new
   end
 
 
