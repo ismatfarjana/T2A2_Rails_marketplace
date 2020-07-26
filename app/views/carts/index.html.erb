@@ -1,29 +1,61 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
-<h1>Carts</h1>
+<div class="all_heading">My Cart</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="cart_container">
 
-  <tbody>
+  <table class="cart">
+    <thead>
+      <tr class="cart_column_heading">
+        <th>Product</th>
+        <th>Price</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+      <tbody class="cart_body">
     <% @carts.each do |cart| %>
-      <tr>
-        <td><%= cart.product.title %></td>
-        <td><%= cart.product.price %></td>
+          <tr class="cart_body_rows">
+            <td><%= cart.product.title.capitalize %></td>
+            <td><%= cart.product.price %></td>
+            <td><%= link_to 'Remove Product from cart', cart, method: :delete, data: { confirm: 'Are you sure?' }, :style=>'color: red;' %></td>
+          </tr>
+    <% end %>
+      </tbody>
+
+
+  </table>
+
+</div>
+
+
+
+
+
+
+
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Product</th>-->
+<!--      <th>Price</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+
+<!--  <tbody>-->
+    <%# @carts.each do |cart| %>
+<!--      <tr>-->
+<!--        <td><%#= cart.product.title %></td>-->
+<!--        <td><%#= cart.product.price %></td>-->
 <!--        <td><%#= link_to 'Show', cart %></td>-->
 <!--        <td><%#= link_to 'Edit', edit_cart_path(cart) %></td>-->
-        <td><%= link_to 'Remove Product from cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!--        <td><%#= link_to 'Remove Product from cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<!--      </tr>-->
+    <%# end %>
+<!--  </tbody>-->
+<!--</table>-->
 
 <br>
 
-<%= link_to 'New Cart', new_cart_path %>
+<%#= link_to 'New Cart', new_cart_path %>

@@ -259,7 +259,37 @@ label {
 }
 
 
+/*style for cart*/
 
+
+table.cart_container {
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+table.cart {
+    width: 800px;
+    margin: auto;
+    height: 100px;
+    margin-top: 50px;
+
+}
+
+tr.cart_column_heading {
+    font-size: 20px;
+    margin: 30px 0;
+
+}
+tbody.cart_body {
+    margin-top: 20px;
+}
+
+
+
+.cart_body_rows {
+    margin: 30px 0;
+}
 
 
 /*navigation bar*/
