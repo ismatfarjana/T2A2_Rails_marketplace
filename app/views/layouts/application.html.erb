@@ -13,6 +13,13 @@
     <header>
       <%= image_tag 'logo.png', class: 'main_logo' %>
       <div class="sign_in_out">
+
+        <%= link_to carts_path do %>
+          <%= image_tag "cart.png", width: 35, height: 35  %>
+        <% end %>
+
+
+
        <% if current_user %>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'sign_log' %>
        <% else %>
