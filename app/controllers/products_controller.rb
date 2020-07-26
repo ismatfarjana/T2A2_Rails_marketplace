@@ -70,6 +70,7 @@ class ProductsController < ApplicationController
     @category = params[:category]
     @products = Product.where(category: @category)
     @profile = Profile.where(user: current_user).last
+    @cart = Cart.new
   end
 
 
