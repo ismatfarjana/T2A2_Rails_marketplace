@@ -7,7 +7,7 @@ class Profile < ApplicationRecord
   validates :address, presence: true
   validates :suburb, presence: false
   validates :postcode, presence: true
-  validates :mobile_number, presence: false
+  validates :mobile_number, presence: true, format: { with: /\d{10}/, message: "Please enter valid mobile number"}
   validates :picture, presence: false
   validates :abn, presence: true
 end
