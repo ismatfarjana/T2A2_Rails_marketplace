@@ -12,17 +12,29 @@
     <div class="profile_description_box">
       <p>
         <strong>First name:</strong>
-        <%= @profile.first_name %>
+        <% if @profile.first_name.present? %>
+          <%= @profile.first_name %>
+        <% else %>
+          First Name Required
+        <% end %>
       </p>
 
       <p>
         <strong>Last name:</strong>
-        <%= @profile.last_name %>
+        <% if @profile.last_name.present? %>
+          <%= @profile.last_name %>
+        <% else %>
+          Last Name Required
+        <% end %>
       </p>
 
       <p>
-        <strong>Abn:</strong>
-        <%= @profile.abn %>
+        <strong>ABN: </strong>
+        <% if @profile.abn.present? %>
+          <%= @profile.abn %>
+        <% else %>
+          ABN Required
+        <% end %>
       </p>
     </div>
 
@@ -30,22 +42,54 @@
 
       <p>
         <strong>Address:</strong>
-        <%= @profile.address %>
+        <% if @profile.address.present? %>
+          <%= @profile.address %>
+        <% else %>
+          Address Required
+        <% end %>
       </p>
 
       <p>
        <strong>State:</strong>
-       <%= @profile.state %>
+        <% if @profile.state.present? %>
+          <%= @profile.state %>
+        <% else %>
+          State Required
+        <% end %>
       </p>
 
       <p>
-       <strong>Postcode:</strong>
-       <%= @profile.postcode %>
+       <strong>Suburb:</strong>
+
+        <% if @profile.suburb.present? %>
+          <%= @profile.suburb %>
+        <% else %>
+          Suburb Required
+        <% end %>
       </p>
+
+
+      <p>
+
+        <strong>Postcode:</strong>
+        <% if @profile.postcode.present? %>
+
+          <%= @profile.postcode %>
+        <% else %>
+          Postcode Required
+        <% end %>
+      </p>
+
+
 
       <p>
         <strong>Mobile number:</strong>
-        <%= @profile.mobile_number %>
+        <% if @profile.mobile_number.present? %>
+
+          <%= @profile.mobile_number %>
+        <% else %>
+          Mobile number required
+        <% end %>
       </p>
 
       <p>
