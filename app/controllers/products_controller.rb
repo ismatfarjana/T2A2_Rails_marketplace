@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @profile = Profile.where(user: current_user).last
   end
 
   # POST /products
