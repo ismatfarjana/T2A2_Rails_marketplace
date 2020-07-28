@@ -2,13 +2,9 @@
 
 <p>
   <strong>Buyer:</strong>
-  <%= @order.buyer %>
+  <%= @order.buyer.profile.first_name.capitalize %>
 </p>
 
-<p>
-  <strong>Seller:</strong>
-  <%= @order.seller %>
-</p>
 
 <p>
   <strong>Paid:</strong>
@@ -20,10 +16,6 @@
   <%= @order.amount %>
 </p>
 
-<p>
-  <strong>Decimal:</strong>
-  <%= @order.decimal %>
-</p>
 
 <p>
   <strong>Fulfilled:</strong>

@@ -49,7 +49,20 @@
           </td>
           <td>
             Total AUD $ <%= @carts.map(&:product).map(&:price).sum %><br />
-            <div class="space"><%= link_to 'Checkout', root_path, style: 'color: white; background-color: RGB(68,124,241); border: 1px solid white; font-size: 13px; padding: 5px 10px;' %></div>
+<!--            <div class="space"><%#= link_to 'Checkout', root_path, style: 'color: white; background-color: RGB(68,124,241); border: 1px solid white; font-size: 13px; padding: 5px 10px;' %></div>-->
+
+            <%= form_tag transactions_path do  %>
+
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.application.credentials.dig(:stripe, :development).dig(:publishable_key) %>"
+                data-amount="	<%= @carts.map(&:product).map(&:price).sum * 100 %>"
+                data-name=""
+                data-description=""
+                data-email="<%= current_user.email %>"
+                data-locale="auto">
+              </script>
+            <% end %>
           </td>
         </tr>
     </tbody>

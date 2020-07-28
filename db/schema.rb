@@ -46,21 +46,22 @@ ActiveRecord::Schema.define(version: 2020_07_28_122047) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.integer "product"
-    t.integer "order"
+    t.bigint "product_id", null: false
+    t.bigint "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "buyer"
-    t.integer "seller"
+    t.bigint "buyer_id", null: false
     t.boolean "paid"
-    t.string "amount"
-    t.string "decimal"
+    t.float "amount"
     t.boolean "fulfilled"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["buyer_id"], name: "index_orders_on_buyer_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -102,6 +103,9 @@ ActiveRecord::Schema.define(version: 2020_07_28_122047) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "carts", "products"
   add_foreign_key "carts", "users", column: "buyer_id"
+  add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
+  add_foreign_key "orders", "users", column: "buyer_id"
   add_foreign_key "products", "users", column: "seller_id"
   add_foreign_key "profiles", "users"
 end
