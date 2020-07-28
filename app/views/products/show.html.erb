@@ -36,7 +36,26 @@
       Seller name <%=  @product.seller.profile.first_name %>
       </div>
 
-    <div class="each_product_show_box_parts"><%= render 'shared/add_product_to_cart' %></div>
+    <div class="each_product_show_box_parts">
+      <% if @profile.present? %>
+        <%= form_with(model: @cart, local: true) do |form| %>
+
+
+          <div class="field" style="visibility: hidden">
+            <%= form.label :product_id %>
+            <%= form.text_field :product_id, :value => @product.id %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit 'Add to Cart' %>
+          </div>
+        <% end %>
+      <% else %>
+
+        <%= link_to "Sign In to add to cart", new_user_session_path, class: 'signing_for_adding_to_cart' %>
+
+      <% end %>
+    </div>
 
   </div>
 

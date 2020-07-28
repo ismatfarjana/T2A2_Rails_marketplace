@@ -5,6 +5,8 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    @products = Product.where(seller_id: current_user.id)
+    @profile = Profile.where(user: current_user).last
   end
 
   # GET /orders/1

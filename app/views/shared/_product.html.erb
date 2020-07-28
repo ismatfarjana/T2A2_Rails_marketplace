@@ -25,11 +25,31 @@
 
           <h4>Seller: <%=  product.seller.profile.first_name %></h4>
         </div>
+
       </div>
 
-    <% end %>
+      <% if @profile.present? %>
+        <%= form_with(model: @cart, local: true) do |form| %>
 
-    <%= render 'shared/add_product_to_cart' %>
+
+          <div class="field" style="visibility: hidden">
+            <%= form.label :product_id %>
+            <%= form.text_field :product_id, :value => product.id %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit 'Add to Cart' %>
+          </div>
+        <% end %>
+      <% else %>
+
+        <%= link_to "Sign In to add to cart", new_user_session_path, class: 'signing_for_adding_to_cart' %>
+
+      <% end %>
+
+
+  <% end %>
+
 
     <%#= form_with(model: @cart, local: true) do |form| %>
 
