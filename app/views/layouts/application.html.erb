@@ -14,10 +14,16 @@
       <%= image_tag 'logo.png', class: 'main_logo' %>
       <div class="sign_in_out">
 
-        
-        <%= link_to carts_path do %>
-          <%= image_tag "cart.png", width: 35, height: 35  %>
-        <% end %>
+        <% if @user.present? %>
+          <%= link_to carts_path do %>
+            <%= image_tag "cart.png", width: 35, height: 35  %>
+          <% end %>
+        <% else %>
+          <%= link_to new_user_registration_path do %>
+            <%= image_tag "cart.png", width: 35, height: 35  %>
+          <% end %>
+      <% end %>
+
 
 
 
