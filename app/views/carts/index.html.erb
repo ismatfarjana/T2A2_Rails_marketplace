@@ -1,10 +1,12 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
 <div class="all_heading">My Cart</div>
+  <% if @carts.empty? %>
+  <p>You don't have ay item in your cart. <div class="space"><%= link_to 'Continue Shopping', root_path, style: 'color: green; font-size: 15px; padding: 3px;' %></div></p>
+  <% else %>
+    <div class="cart_container">
 
-<div class="cart_container">
-
-  <table class="cart">
+    <table class="cart">
     <thead>
       <tr class="cart_body_rows" style="padding-bottom: 25px;">
         <th>Product</th>
@@ -39,10 +41,11 @@
 
 
   </table>
-  <hr>
+    <hr>
 
-  <table class="cart" id="total">
-    <tbody>
+
+    <table class="cart" id="total">
+      <tbody>
         <tr>
           <td>
             <div class="space"><%= link_to 'Continue Shopping', root_path, style: 'color: green; font-size: 15px; padding: 3px;' %></div>
@@ -65,9 +68,9 @@
             <% end %>
           </td>
         </tr>
-    </tbody>
-  </table>
-
+      </tbody>
+    </table>
+  <% end %>
 </div>
 
 
