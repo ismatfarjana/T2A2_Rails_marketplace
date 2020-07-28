@@ -706,7 +706,10 @@ textarea#product_description {
 }
 
 
-
+.signup_msg {
+    font-size: 15px;
+    color: darkred;
+}
 
 
 
