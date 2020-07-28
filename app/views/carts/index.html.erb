@@ -52,6 +52,18 @@
           </td>
           <td>
             Total AUD $ <%= @carts.map(&:product).map(&:price).sum %><br />
+            <div class="testnotice">This payment system is currently on Test mood.<br />
+              To test the functionality of the payment system follow the instructions:
+             <ul>
+               <li>
+                 Add <strong>4242 4242 4242 4242</strong> as the card number.
+               </li>
+               <li>
+                 Add any future date as date and any three digits as CVV.
+               </li>
+             </ul>
+
+            </div>
 <!--            <div class="space"><%#= link_to 'Checkout', root_path, style: 'color: white; background-color: RGB(68,124,241); border: 1px solid white; font-size: 13px; padding: 5px 10px;' %></div>-->
 
             <%= form_tag transactions_path do  %>
