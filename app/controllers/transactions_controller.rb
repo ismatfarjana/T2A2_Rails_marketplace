@@ -2,9 +2,9 @@
 class TransactionsController< ApplicationController
 
   def create
-    # @job = Job.find(params[:job_id])
-    # @amount = @job.day.to_i * 100 * 100
-    @order = 
+    Stripe.api_key = Rails.application.credentials.dig(:stripe, :development).dig(:secret_key)
+    carts = Cart.where(buyer: current_user)
+    amount = carts.map(&:product).map(&:price).sum.to_i
 
     begin
 
@@ -14,18 +14,32 @@ class TransactionsController< ApplicationController
           :source  => params[:stripeToken]
       )
 
-      charge = Stripe::Charge.create(
-          :amount       => @amount,
+      Stripe::Charge.create(
+          :amount       => amount * 100,
           :currency     => "aud",
           :customer     => customer.id,
-          :description  => "payment for Job posting")
+          :description  => "payment from plantish"
+      )
 
-      Payment.create!(job_id: @job.id)
-      @job.update_attributes(:status => 'approved', :amount => @amount)
-      redirect_to jobs_path
+
+      order = Order.create!(
+          buyer_id: current_user.id,
+          paid: true,
+          amount: amount,
+          fulfilled: false
+      )
+
+      carts.map do |c|
+        order_item = OrderItem.new( product_id: c.product.id, order_id: order.id)
+        order_item.save!
+      end
+
+      carts.map{ |c| c.destroy }
+
+      redirect_to orders_path
     rescue Stripe::CardError => e
       @error = e
-      redirect_to jobs_path, notice: @error
+      redirect_to carts_path, notice: @error
     end
 
   end
