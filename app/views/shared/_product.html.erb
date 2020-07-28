@@ -29,19 +29,19 @@
 
     <% end %>
 
+    <%= render 'shared/add_product_to_cart' %>
+
+    <%#= form_with(model: @cart, local: true) do |form| %>
 
 
-    <%= form_with(model: @cart, local: true) do |form| %>
+<!--      <div class="field" style="visibility: hidden">-->
+        <%#= form.label :product_id %>
+        <%#= form.text_field :product_id, :value => product.id %>
+<!--      </div>-->
 
-
-      <div class="field" style="visibility: hidden">
-        <%= form.label :product_id %>
-        <%= form.text_field :product_id, :value => product.id %>
-      </div>
-
-      <div class="actions">
-       <%= form.submit 'Add to Cart' %>
-      </div>
-    <% end %>
+<!--      <div class="actions">-->
+       <%#= form.submit 'Add to Cart' %>
+<!--      </div>-->
+    <%# end %>
   </div>
 <% end %>

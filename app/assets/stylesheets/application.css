@@ -318,6 +318,15 @@ tbody.cart_body {
 }
 
 
+
+a.signing_for_adding_to_cart {
+    background-color: RGB(151,204,195);
+    border: 1px solid RGB(172,209,195);
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
 /*navigation bar*/
 
 .navbar {
