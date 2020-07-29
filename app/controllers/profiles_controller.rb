@@ -17,8 +17,8 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    @profile = Profile.new
-
+   
+    @profile = Profile.where(user: current_user).last
   end
 
   # GET /profiles/1/edit
