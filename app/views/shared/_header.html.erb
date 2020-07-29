@@ -23,14 +23,15 @@
 
 
 
-
-    <% if @profile.present? && @profile.id.present? %>
+    <% if current_user && current_user.profile.present? %>
       <%= link_to "My Profile", profile_path(@profile) %>
-      <%# elsif @user.present? %>
-      <%#= link_to "Add Profile", new_profile_path %>
-     <% end %>
+    <% elsif current_user %>
+      <%= link_to "Add Profile", new_profile_path %>
+    <% end %>
 
-    <% if @profile.present?  %>
+    
+
+    <% if @profile.present? && @profile.id.present?  %>
       <%= link_to "My Product", products_path %>
     <% end %>
 
