@@ -14,7 +14,7 @@
       <%= image_tag 'logo.png', class: 'main_logo' %>
       <div class="sign_in_out">
 
-        <% if @user.present? %>
+        <% if @profile.present? %>
           <%= link_to carts_path do %>
             <%= image_tag "cart.png", width: 35, height: 35  %>
           <% end %>
