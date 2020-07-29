@@ -26,8 +26,8 @@
 
     <% if @profile.present? && @profile.id.present? %>
       <%= link_to "My Profile", profile_path(@profile) %>
-      <% elsif @user.present? %>
-      <%= link_to "Add Profile", new_profile_path %>
+      <%# elsif @user.present? %>
+      <%#= link_to "Add Profile", new_profile_path %>
      <% end %>
 
     <% if @profile.present?  %>
