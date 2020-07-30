@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="all_heading"><%= @order.buyer.profile.first_name %>'s Ordered Item</div>
+
 <p>
   <strong>Buyer:</strong>
   <%= @order.buyer.profile.first_name.capitalize %>
@@ -13,7 +15,7 @@
 
 <p>
   <strong>Amount:</strong>
-  <%= @order.amount %>
+  AUD $<%= @order.amount %>
 </p>
 
 

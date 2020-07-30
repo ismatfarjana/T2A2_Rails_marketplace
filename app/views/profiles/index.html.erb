@@ -20,6 +20,7 @@
               State: Not Added
           <% end %><br />
             Postcode: <%= profile.postcode %><br/>
+            Email address: <%= profile.user.email %>
          </div>
          <%= link_to 'View Products', sellers_product_list_path(profile.user) %>
        </div>

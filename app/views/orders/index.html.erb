@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Orders</h1>
+<div class="all_heading"><%= @profile.first_name.capitalize %>'s Order list</div>
 
 <table>
   <thead>
@@ -18,11 +18,11 @@
       <tr>
         <td><%= order.buyer.profile.first_name.capitalize %></td>
         <td><%= order.paid %></td>
-        <td><%= order.amount %></td>
+        <td>AUD $<%= order.amount %></td>
         <td><%= order.fulfilled %></td>
         <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--        <td><%#= link_to 'Edit', edit_order_path(order) %></td>-->
+<!--        <td><%#= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
