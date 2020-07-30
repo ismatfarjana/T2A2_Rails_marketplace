@@ -627,6 +627,9 @@ a.signing_for_adding_to_cart {
     margin-top: 10px;
 }
 
+.one_member_picture > img {
+    border-radius: 100px;
+}
 
 
 
@@ -710,6 +713,41 @@ textarea#product_description {
     font-size: 15px;
     color: darkred;
 }
+
+
+
+
+
+
+
+
+
+
+.rotate-center {
+-webkit-animation: rotate-center 7s linear infinite both;
+animation: rotate-center 7s linear infinite both;
+}
+@-webkit-keyframes rotate-center {
+0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+@keyframes rotate-center {
+0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+
 
 
 
