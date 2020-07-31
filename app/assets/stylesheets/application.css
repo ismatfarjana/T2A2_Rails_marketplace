@@ -330,16 +330,28 @@ a.signing_for_adding_to_cart {
 /*navigation bar*/
 
 .navbar {
-    padding-bottom: 20px;
+
     margin-top: 20px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
 }
 
+.navbar > .nav_link_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .navbar > .nav_link_wrapper > a {
     margin: 0 1em;
     text-decoration: none;
     font-size: 20px;
     color: darkslategray;
+    flex-flow: row;
+    flex-wrap: nowrap;
+
 }
 
 .navbar > .nav_link_wrapper > a:hover {
@@ -386,6 +398,65 @@ a.signing_for_adding_to_cart {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+
+
+/*hamburger menu */
+
+
+.hamburger_dropdown {
+    position: relative;
+    top: -90px;
+    display: inline-block;
+    height: 0px;
+    visibility: hidden;
+    left: 300px;
+}
+
+.hamburger_dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 30px;
+
+}
+
+
+
+.nav_category_ham {
+    font-size: 10px;
+    padding: 6px 16px;
+    color: darkslategray;
+}
+
+
+.hamburger_dropdown_content a {
+    color: darkslategray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+}
+
+.hamburger_dropdown_content a:hover {background-color: lightgoldenrodyellow}
+
+.hamburger_dropdown:hover .hamburger_dropdown_content {
+    display: block;
+}
+
+
+
+
+
+
+
+
 
 /*main homepage category */
 
@@ -750,8 +821,34 @@ animation: rotate-center 7s linear infinite both;
 
 
 
+@media all and (max-width:500px) {
+    .hamburger_dropdown {
+        height: auto;
+        visibility: visible;
+        position: relative;
 
-/*style for full footer */
+    }
+    .navbar {
+        height: 0;
+        visibility: hidden;
+    }
+
+
+
+}
+
+
+@media all and (max-width:700px) {
+
+}
+
+
+
+
+
+
+
+    /*style for full footer */
 footer {
     height: 50px;
     text-align: center;
