@@ -42,4 +42,48 @@
   </div>
 </div>
 
+
+
+
+
+
+<div class="hamburger_dropdown">
+  <div class="hamburger_icon"><%= image_tag 'hamburger.png', class: '' %></div>
+  <div class="hamburger_dropdown_content">
+      <%= link_to "Home", '/' %>
+    <% if current_user && @profile.present? && @profile.id.present? %>
+      <%= link_to "My Profile", profile_path(@profile) %>
+    <% elsif current_user %>
+      <%= link_to "Add Profile", new_profile_path %>
+    <% end %>
+
+
+
+    <% if @profile.present? && @profile.id.present?  %>
+      <%= link_to "My Product", products_path %>
+    <% end %>
+
+    <%= link_to "Our Community", profiles_path %>
+    <%= link_to "About us", about_path %>
+    <%= link_to "Contact", contact_path %>
+      <div class="dropdown">
+        <div class="nav_category_ham">Categories</div>
+          <div class="dropdown-content">
+          <a href="/categories/seeds">Seeds</a>
+          <a href="/categories/seedlings">Seedlings</a>
+          <a href="/categories/smallplants">Small Plants</a>
+          <a href="/categories/flowers">Flowers</a>
+          <a href="/categories/fruits">Fruits</a>
+          <a href="/categories/indoorplants">Indoor Plants</a>
+          <a href="/categories/succulents">Succulents</a>
+          <a href="/categories/vegetables">Vegetables</a>
+          <a href="/categories/gardentools">Garden Tools</a>
+          </div>
+      </div>
+
+
+  </div>
+
+</div>
+
 <!--&& @product.id.present?-->
