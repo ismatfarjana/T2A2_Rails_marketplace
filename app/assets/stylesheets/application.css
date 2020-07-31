@@ -900,11 +900,38 @@ animation: rotate-center 7s linear infinite both;
 
 }
 
+@media all and (max-width:600px) {
+
+}
 
 
 
+@media all and (max-width:910px) {
+    .hamburger_dropdown {
+        height: auto;
+        visibility: visible;
+        right: 40vw;
+        top: -10px;
+    }
+    .navbar {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
 
-@media all and (max-width:700px) {
+    .sign_in_out {
+        flex-direction: column-reverse;
+        position: absolute;
+        top: 190px;
+        right: 10px;
+        font-size: 15px;
+        justify-content: space-around;
+    }
+}
+
+
+
+@media all and (max-width:600px) {
 
 }
 
