@@ -1149,6 +1149,10 @@ animation: rotate-center 7s linear infinite both;
         width: 350px;
     }
 
+    input#profile_first_name, input#profile_last_name, input#profile_abn, input#profile_address, input#profile_state, input#profile_suburb, input#profile_postcode, input#profile_mobile_number {
+        width: 40vw;
+    }
+
 }
 
 /*------------------------------------------------------mediaquery 400*/
@@ -1215,6 +1219,7 @@ animation: rotate-center 7s linear infinite both;
     .add_or_edit_profile_form_parts#profile_description > .field {
         width: 32vw;
     }
+
 
     .cart_container > table.cart {
         width: 250px;
