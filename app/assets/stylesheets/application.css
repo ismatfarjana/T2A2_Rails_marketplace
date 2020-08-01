@@ -890,6 +890,11 @@ animation: rotate-center 7s linear infinite both;
         padding: 0 5vw;
     }
 
+    .cart_container > table.cart {
+        width: 500px;
+    }
+
+
 }
 
 /*------------------------------------------------------------ mediaquery 600*/
@@ -1140,6 +1145,10 @@ animation: rotate-center 7s linear infinite both;
         width: 60vw;
     }
 
+    .cart_container > table.cart {
+        width: 350px;
+    }
+
 }
 
 /*------------------------------------------------------mediaquery 400*/
@@ -1205,6 +1214,10 @@ animation: rotate-center 7s linear infinite both;
 
     .add_or_edit_profile_form_parts#profile_description > .field {
         width: 32vw;
+    }
+
+    .cart_container > table.cart {
+        width: 250px;
     }
 
 
