@@ -190,6 +190,9 @@ input[type="submit"] {
     width: 800px;
     background-color: RGBA(137,219,185,0.4);
 }
+
+
+
 label {
     text-align: left;
     padding-left: 100px;
@@ -200,25 +203,30 @@ label {
     font-size: 20px;
 }
 
+
+
 .add_or_edit_profile_form {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+
 }
 
 .add_or_edit_profile_form_parts#profile_picture {
-    width: 200px;
     margin: 50px 5px;
-    padding: 80px 60px;
+    padding: 0px 60px;
 }
 
 
 
 
 .add_or_edit_profile_form_parts#profile_description {
-    padding: 0 10px;
+    padding: 0 200px;
     margin: 20px 0;
 
+}
+
+.add_or_edit_profile_form_parts#profile_description > .field > label.label {
+    padding-left: 0;
 }
 
 .add_or_edit_profile_form_parts#profile_description > .field {
@@ -710,7 +718,7 @@ a.signing_for_adding_to_cart {
 
 input[type=text], select, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 0 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -855,6 +863,20 @@ animation: rotate-center 7s linear infinite both;
         width: 300px;
         height: 300px;
     }
+
+    .profile_form {
+        width: 80vw;
+        margin-bottom: 20vw;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description {
+        padding: 0 24vw;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description > .field {
+        width: 35vw;
+    }
+
 }
 
 /*------------------------------------------------------------ mediaquery 600*/
@@ -915,6 +937,22 @@ animation: rotate-center 7s linear infinite both;
         text-align: left;
         display: flex;
         flex-direction: column;
+    }
+
+
+    .add_or_edit_profile_form_parts#profile_description {
+        padding: 0 22vw;
+        font-size: 20px;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description > .field {
+        width: 33vw;
+    }
+
+
+
+    .add_or_edit_profile_form_parts#profile_description > .field >label.label {
+        font-size: 15px;
     }
 
 }
@@ -1047,12 +1085,21 @@ animation: rotate-center 7s linear infinite both;
         background-color: RGB(0,104,138);
         color: RGB(249,228,188);
         height: 30px;
-        font-size: 20px;
+        font-size: 15px;
         width: 120px;
     }
     .label#label {
         padding-left: 50px;
         font-size: 13px;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description {
+        padding: 0 22vw;
+        font-size: 20px;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description > .field {
+        width: 32vw;
     }
 
 
@@ -1115,7 +1162,14 @@ animation: rotate-center 7s linear infinite both;
         font-size: 1.5em;
     }
 
-   
+    .add_or_edit_profile_form_parts#profile_description {
+        padding: 0 22vw;
+        font-size: 20px;
+    }
+
+    .add_or_edit_profile_form_parts#profile_description > .field {
+        width: 32vw;
+    }
 
 
 }
