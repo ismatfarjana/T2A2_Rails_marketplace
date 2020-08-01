@@ -905,6 +905,17 @@ animation: rotate-center 7s linear infinite both;
         height: 250px;
     }
 
+    .my_profile_container {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        flex-direction: column;
+    }
+    .my_profile_box#profile_description {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 
@@ -1044,6 +1055,8 @@ animation: rotate-center 7s linear infinite both;
         font-size: 13px;
     }
 
+
+
 }
 
 /*------------------------------------------------------mediaquery 400*/
@@ -1101,6 +1114,9 @@ animation: rotate-center 7s linear infinite both;
     .each_product_show_box_parts > h1 {
         font-size: 1.5em;
     }
+
+   
+
 
 }
 
