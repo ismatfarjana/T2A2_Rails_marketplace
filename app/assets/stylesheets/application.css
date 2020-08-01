@@ -753,11 +753,11 @@ input[type=text], select, textarea {
     background-color: lightgoldenrodyellow;
     width: 800px;
     height: 680px;
-    padding: 100px 0px ;
+    padding: 100px 200px ;
     margin: auto;
     text-align: left;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
 
 
@@ -765,7 +765,11 @@ input[type=text], select, textarea {
 
 .new_product_form_parts {
     padding: 0 40px;
-    width: 400px;
+    /*width: 400px;*/
+}
+
+.new_product_form > .new_product_form_parts#part2 > input#product_image {
+    width: 250px;
 }
 
 
@@ -877,6 +881,15 @@ animation: rotate-center 7s linear infinite both;
         width: 35vw;
     }
 
+    .new_product_form {
+        width: 80vw;
+        padding: 0 15vw;
+    }
+
+    .new_product_form > .new_product_form_parts {
+        padding: 0 5vw;
+    }
+
 }
 
 /*------------------------------------------------------------ mediaquery 600*/
@@ -953,6 +966,15 @@ animation: rotate-center 7s linear infinite both;
 
     .add_or_edit_profile_form_parts#profile_description > .field >label.label {
         font-size: 15px;
+    }
+
+    .new_product_form {
+        width: 80vw;
+        padding: 0 12vw;
+    }
+
+    .new_product_form > .new_product_form_parts {
+        padding: 0 3vw;
     }
 
 }
@@ -1101,8 +1123,22 @@ animation: rotate-center 7s linear infinite both;
     .add_or_edit_profile_form_parts#profile_description > .field {
         width: 32vw;
     }
+    .new_product_form {
+        width: 80vw;
+        padding: 0 5vw;
+    }
 
+    .new_product_form_parts#part1 {
 
+    }
+
+    input[type=text], select, textarea {
+        width: 60vw;
+    }
+
+    .new_product_form_parts#part1 > .form_parts > input#product_price {
+        width: 60vw;
+    }
 
 }
 
