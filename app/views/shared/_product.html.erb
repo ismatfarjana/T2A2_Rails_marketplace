@@ -30,7 +30,7 @@
     <% end %>
 
 
-    <% if @profile.present? && @profile.id.present? %>
+    <% if current_user && @profile.present? && @profile.id.present? %>
       <%= form_with(model: @cart, local: true) do |form| %>
         <div class="field" style="visibility: hidden">
           <%= form.label :product_id %>
@@ -41,9 +41,10 @@
           <%= form.submit 'Add to Cart' %>
         </div>
       <% end %>
+    <% elsif current_user %>
+      <%= link_to "Create profile to add to cart", new_profile_path, class: 'signing_for_adding_to_cart' %>
     <% else %>
-
-        <%= link_to "Create profile to add to cart", new_profile_path, class: 'signing_for_adding_to_cart' %>
+      <%= link_to "Log in to add to cart", new_user_session_path, class: 'signing_for_adding_to_cart' %>
     <% end %>
   </div>
 <% end %>
