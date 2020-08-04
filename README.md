@@ -1,12 +1,14 @@
 
 
 # Plantish : Gardeners Marketplace
+## Developed by: Syeda Ismat Farjana 
+## Assignment: T2A2
 ## Link to Github repository: [Github](https://github.com/ismatfarjana/T2A2_Rails_marketplace)
-## Link to Live website deployed on Heroku: [Plantish](https://plantish.herokuapp.com/)
+## Link to Live website deployed on Heroku: [Plantish website live](https://plantish.herokuapp.com/)
 ---
 
 ## Introduction:
-Plantish is a twoway uniq marketplace app for selling and buying garden grown fruits, vegetables, seeds, seedlings and more.
+Plantish is a two-way unique marketplace app for selling and buying garden grown fruits, vegetables, seeds, seedlings, renting or gardening tools and more.
 
 ## Problem I am trying to solve:
  
@@ -25,7 +27,7 @@ Rather the letting the extra harvest go waste Plantish will give the opportunity
 The purpose of Plantish is to creating a place to let anyone to sell their garden related product and also allowing other person to buy it.
 
 ### Target audience
-  - Age range: 30 - 80yrs old
+  - Age range: 20+
   - Gender: All
   - Living in house with backyard / space to do gardening
   - Living in a suburb away from main city
@@ -77,16 +79,178 @@ The purpose of Plantish is to creating a place to let anyone to sell their garde
  ---
 
 ## Sitemap:
+Mockup of Plantish sitemap
 ![](https://i.imgur.com/jRFRqhj.jpg)
+
 
 ---
 
 ## Screenshots
 
+### Home:
+#### Desktop:
+![](https://i.imgur.com/wLzTqiv.jpg)
+
+
+#### Tab:
+![](https://i.imgur.com/GfLYwRO.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/Kejvk8X.png)
+
+
+
+### Create profile:
+#### Desktop:
+![](https://i.imgur.com/1FnJSjc.png)
+
+
+#### Tab:
+![](https://i.imgur.com/UoHlhkA.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/I88kf0o.png)
+
+
+
+### My profile:
+#### Desktop:
+![](https://i.imgur.com/54Ia5VD.png)
+
+
+#### Tab:
+![](https://i.imgur.com/Ci0wW9c.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/raY5o1t.png)
+
+
+
+### Add products:
+#### Desktop:
+![](https://i.imgur.com/MQQeAWT.png)
+
+
+#### Tab:
+![](https://i.imgur.com/3QREz8X.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/5LQmtpi.png)
+
+
+
+### My products:
+#### Desktop:
+![](https://i.imgur.com/LDZiZV8.png)
+
+
+#### Tab:
+![](https://i.imgur.com/XtadL0h.png)
+![](https://i.imgur.com/21h6IEK.png)
+
+
+#### Mobile:
+
+
+
+### Category products:
+#### Desktop:
+![](https://i.imgur.com/HeLq5FE.jpg)
+
+
+#### Tab:
+![](https://i.imgur.com/Em7x6g3.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/nyAPILK.png)
+
+
+
+### Each products:
+#### Desktop:
+![](https://i.imgur.com/MifbtYu.jpg)
+
+
+#### Tab:
+![](https://i.imgur.com/UmT1ztr.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/KoQuYHF.png)
+
+
+
+### cart:
+#### Desktop:
+![](https://i.imgur.com/SfqMvmn.png)
+
+
+#### Tab:
+![](https://i.imgur.com/REgJ5Aa.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/BchvcdQ.png)
+
+
+
+### Community:
+#### Desktop:
+![](https://i.imgur.com/t8S0goW.png)
+
+
+#### Tab:
+![](https://i.imgur.com/Abit3d1.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/VAQOO4x.png)
+
+
+
+
+### About us:
+#### Desktop:
+![](https://i.imgur.com/zZCoeuE.jpg)
+
+
+#### Tab:
+![](https://i.imgur.com/7Jj85UV.png)
+
+
+#### Mobile:
+![](https://i.imgur.com/DSG2Wbt.png)
+
+
+
+### Contact us:
+#### Desktop:
+
+#### Tab:
+
+#### Mobile:
+
 
 ---
 
 ## Wireframes
+
+### Desktop:
+![](https://i.imgur.com/8oaoLOY.png)
+
+### Tab:
+![](https://i.imgur.com/EQurPBc.png)
+
+
+
+### Mobile phone:
+
+![](https://i.imgur.com/uKdWDSc.png)
 
 
 
@@ -107,7 +271,7 @@ The purpose of Plantish is to creating a place to let anyone to sell their garde
  User is the first component of this app. An user will be able to browse all the category and see all the products.
 
 ### Profile:
- The Profile includes imformations reated to the registered user. One needs to create a profile in order to be able to start selling their own product or buying others item.
+ The Profile includes informations reated to the registered user. One needs to create a profile in order to be able to start selling their own product or buying others item.
  
 ### Plantish community
 This community holds all the registered users contact information so they can connect to each other and make the internal bond stornger by helping each other with their gardening skills or by any means.
@@ -274,6 +438,12 @@ Carts:
 ---
 
 ### Task Allocation and Tracking
+
+The process is tracked by trello:
+![](https://i.imgur.com/7FsujXP.jpg)
+![](https://i.imgur.com/NNYHz1O.jpg)
+![](https://i.imgur.com/7R7NJCX.jpg)
+
 
 ---
 
