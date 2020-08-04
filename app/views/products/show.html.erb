@@ -39,10 +39,6 @@
     <div class="each_product_show_box_parts">
       <% if current_user && @profile.present? && @profile.id.present? %>
         <%= form_with(model: @cart, local: true) do |form| %>
-          <div class="field" style="visibility: hidden">
-            <%= form.label :product_id %>
-            <%= form.text_field :product_id, :value => product.id %>
-          </div>
 
           <div class="actions">
             <%= form.submit 'Add to Cart' %>
