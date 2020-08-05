@@ -2,8 +2,7 @@
 
 # Plantish : Gardeners Marketplace
 **Developed by: Syeda Ismat Farjana | Assignment: T2A2**
-
-**[Link to Github repository](https://github.com/ismatfarjana/T2A2_Rails_marketplace) | [Live site (deployed on Heroku)](https://plantish.herokuapp.com/)**
+ **[Link to Github repository](https://github.com/ismatfarjana/T2A2_Rails_marketplace) | [Live site (deployed on Heroku)](https://plantish.herokuapp.com/)**
 
 ---
 
@@ -34,12 +33,31 @@ The purpose of Plantish is to creating a place to let anyone to sell their garde
   - Looking for fresh home grown vegetables, fruits, plants, seelings, seeds, garden tools, indoor plants, terrariums and succulents.
 
 ### Tech stack
-  
+  **Frontend:**
   - HTML
   - CSS
+  - ERB
+
+ **Backend**
+  - Ruby
   - Ruby on Rails
+
+ **Database**
   - Postgresql
+
+ **Deployment**
   - Heroku
+
+ **Utilities**
+  - AWS S3
+  - Stripe
+  - Devise
+
+
+ **DevOps**
+  - RubyMine
+  - Git
+  - Github
   - Lucid chart
   - DBDISGINER
   - Trello
@@ -87,153 +105,28 @@ Mockup of Plantish sitemap
 
 ## Screenshots
 
-### Home:
-#### Desktop:
-![](https://i.imgur.com/wLzTqiv.jpg)
 
 
-#### Tab:
-![](https://i.imgur.com/GfLYwRO.png)
 
 
-#### Mobile:
-![](https://i.imgur.com/Kejvk8X.png)
+| Screenshots         |                Mobile                | Tablet                               | Desktop                              |
+| ------------------- |:------------------------------------:| ------------------------------------ | ------------------------------------ |
+| Home                | ![](https://i.imgur.com/Kejvk8X.png) | ![](https://i.imgur.com/GfLYwRO.png) | ![](https://i.imgur.com/wLzTqiv.jpg) |
+| Create Profile      | ![](https://i.imgur.com/I88kf0o.png) | ![](https://i.imgur.com/UoHlhkA.png) | ![](https://i.imgur.com/1FnJSjc.png) |
+| My Profile          | ![](https://i.imgur.com/raY5o1t.png) | ![](https://i.imgur.com/Ci0wW9c.png) | ![](https://i.imgur.com/54Ia5VD.png) |
+| My Products         | ![](https://i.imgur.com/21h6IEK.png) | ![](https://i.imgur.com/XtadL0h.png) | ![](https://i.imgur.com/LDZiZV8.png) |
+| Add product         | ![](https://i.imgur.com/5LQmtpi.png) | ![](https://i.imgur.com/3QREz8X.png) | ![](https://i.imgur.com/MQQeAWT.png) |
+| Product by Category | ![](https://i.imgur.com/nyAPILK.png) | ![](https://i.imgur.com/Em7x6g3.png) | ![](https://i.imgur.com/HeLq5FE.jpg) |
+| Each Product        | ![](https://i.imgur.com/UmT1ztr.png) | ![](https://i.imgur.com/UmT1ztr.png) | ![](https://i.imgur.com/MifbtYu.jpg) |
+| Cart                | ![](https://i.imgur.com/BchvcdQ.png) | ![](https://i.imgur.com/REgJ5Aa.png) | ![](https://i.imgur.com/SfqMvmn.png) |
+| Payment             |      ![](https://i.imgur.com/bHfOV5Q.png) | ![](https://i.imgur.com/GOOYa2P.png) | ![](https://i.imgur.com/rUcJn8U.png) |         
+| Community           |  ![](https://i.imgur.com/VAQOO4x.png) |![](https://i.imgur.com/Abit3d1.png)  | ![](https://i.imgur.com/t8S0goW.png)      |
+| About us            |  ![](https://i.imgur.com/DSG2Wbt.png) | ![](https://i.imgur.com/7Jj85UV.png) |![](https://i.imgur.com/zZCoeuE.jpg) |
+| Contact us          |                 Text                 | Text                                 | ----                                 |
 
 
 
-### Create profile:
-#### Desktop:
-![](https://i.imgur.com/1FnJSjc.png)
 
-
-#### Tab:
-![](https://i.imgur.com/UoHlhkA.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/I88kf0o.png)
-
-
-
-### My profile:
-#### Desktop:
-![](https://i.imgur.com/54Ia5VD.png)
-
-
-#### Tab:
-![](https://i.imgur.com/Ci0wW9c.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/raY5o1t.png)
-
-
-
-### Add products:
-#### Desktop:
-![](https://i.imgur.com/MQQeAWT.png)
-
-
-#### Tab:
-![](https://i.imgur.com/3QREz8X.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/5LQmtpi.png)
-
-
-
-### My products:
-#### Desktop:
-![](https://i.imgur.com/LDZiZV8.png)
-
-
-#### Tab:
-![](https://i.imgur.com/XtadL0h.png)
-![](https://i.imgur.com/21h6IEK.png)
-
-
-#### Mobile:
-
-
-
-### Category products:
-#### Desktop:
-![](https://i.imgur.com/HeLq5FE.jpg)
-
-
-#### Tab:
-![](https://i.imgur.com/Em7x6g3.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/nyAPILK.png)
-
-
-
-### Each products:
-#### Desktop:
-![](https://i.imgur.com/MifbtYu.jpg)
-
-
-#### Tab:
-![](https://i.imgur.com/UmT1ztr.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/KoQuYHF.png)
-
-
-
-### cart:
-#### Desktop:
-![](https://i.imgur.com/SfqMvmn.png)
-
-
-#### Tab:
-![](https://i.imgur.com/REgJ5Aa.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/BchvcdQ.png)
-
-
-
-### Community:
-#### Desktop:
-![](https://i.imgur.com/t8S0goW.png)
-
-
-#### Tab:
-![](https://i.imgur.com/Abit3d1.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/VAQOO4x.png)
-
-
-
-
-### About us:
-#### Desktop:
-![](https://i.imgur.com/zZCoeuE.jpg)
-
-
-#### Tab:
-![](https://i.imgur.com/7Jj85UV.png)
-
-
-#### Mobile:
-![](https://i.imgur.com/DSG2Wbt.png)
-
-
-
-### Contact us:
-#### Desktop:
-
-#### Tab:
-
-#### Mobile:
 
 
 ---
@@ -439,10 +332,15 @@ Carts:
 
 ### Task Allocation and Tracking
 
+
+
 The process is tracked by trello:
 ![](https://i.imgur.com/7FsujXP.jpg)
 ![](https://i.imgur.com/NNYHz1O.jpg)
 ![](https://i.imgur.com/7R7NJCX.jpg)
+
+**[Link to Trello](https://trello.com/b/t3Gl2Y4D/t2a2rails-app)**
+To have the access to Trello board send me a request.
 
 
 ---
