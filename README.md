@@ -2,7 +2,8 @@
 
 # Plantish : Gardeners Marketplace
 **Developed by: Syeda Ismat Farjana | Assignment: T2A2**
- **[Link to Github repository](https://github.com/ismatfarjana/T2A2_Rails_marketplace) | [Live site (deployed on Heroku)](https://plantish.herokuapp.com/)**
+
+**[Link to Github repository](https://github.com/ismatfarjana/T2A2_Rails_marketplace) | [Live site (deployed on Heroku)](https://plantish.herokuapp.com/)**
 
 ---
 
