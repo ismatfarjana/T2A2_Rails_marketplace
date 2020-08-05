@@ -1,4 +1,7 @@
 
+![Twitter Follow](https://img.shields.io/twitter/follow/ismat_farjana?style=social)  ![GitHub followers](https://img.shields.io/github/followers/ismatfarjana?style=social) 
+![GitHub language count](https://img.shields.io/github/languages/count/ismatfarjana/T2A2_Rails_marketplace) ![GitHub watchers](https://img.shields.io/github/watchers/ismatfarjana/T2A2_Rails_marketplace?style=social) ![GitHub top language](https://img.shields.io/github/languages/top/ismatfarjana/T2A2_Rails_marketplace) ![GitHub repo size](https://img.shields.io/github/repo-size/ismatfarjana/T2A2_Rails_marketplace)
+
 
 # Plantish : Gardeners Marketplace
 **Developed by: Syeda Ismat Farjana | Assignment: T2A2**
@@ -365,6 +368,7 @@ Manual testing and Bug fixing
 | `Add to cart` page breaks the app when user not logged in.| ERD : Cart is connected to db with user_id and product_id, so if there is no user logged in it is breaking the app on production when trying to add product to cart  | The structure of my ERD is fully based on DATABASE. I did my research and found out that it needs Javascript skill to add the product temporarily in cart. For now, I fixed ths bug by disabeing the `add to cart` buttton for users who are not logged in or sighed in.     | Enabeling the  local cart with script |
 | Clicking on **Our Community** page broke the app | User didnot filled all the required info place in form | adding validation to profile model and enabeling the image properly on community page | Enableing the community page to all without logging in to the website |
 |**Mobile number** is taking everything in the form| mobile_number is been saved in the db as string | I desgined mobile_number to save as `string` in the database because it is not used for any kind of calculation. So the solution for this problem will be setting a validation on `Profile` model with **Regex** to allow only 10 numeric digits | -
+| Add to cart button on each product show not working, giving error| | | |
 
 
 Scope of making Better user experience
