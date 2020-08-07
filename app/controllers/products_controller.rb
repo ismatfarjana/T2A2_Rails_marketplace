@@ -1,72 +1,62 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  # GET /products
-  # GET /products.json
+  # Get current users products
+  # Get current users latest profile
   def index
     @products = Product.where(seller_id: current_user.id)
     @profile = Profile.where(user: current_user).last
   end
 
-  # GET /products/1
-  # GET /products/1.json
+  # Get current users latest profile
+  # Initialise a Cart
   def show
     @profile = Profile.where(user: current_user).last
     @cart = Cart.new
   end
 
-  # GET /products/new
+  # Initialise a product
+  # Get current users latest profile
   def new
     @product = Product.new
     @profile = Profile.where(user: current_user).last
   end
 
-  # GET /products/1/edit
+  # Get current users latest profile
   def edit
     @profile = Profile.where(user: current_user).last
   end
 
-  # POST /products
-  # POST /products.json
+  # Create a new product with current user as seller
   def create
     @product = Product.new(product_params.merge({seller_id: current_user.id}))
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      redirect_to @product, notice: 'Product was successfully created.'
+    else
+      render :new
     end
   end
 
-  # PATCH/PUT /products/1
-  # PATCH/PUT /products/1.json
+  # Update current users product
   def update
-    respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
-      else
-        format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.update(product_params)
+      redirect_to @product, notice: 'Product was successfully updated.'
+    else
+      render :edit
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
+  # Destroy current user product
   def destroy
     @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+     redirect_to products_url, notice: 'Product was successfully destroyed.'
   end
 
-
+  # Get one specific category
+  # Get all products of that category
+  # Give access of adding to cart for each product of that specific category
+  # Get the latest profile of current user
   def category
     @category = params[:category]
     @products = Product.where(category: @category)
@@ -74,7 +64,9 @@ class ProductsController < ApplicationController
     @cart = Cart.new
   end
 
-
+  # Get the name and all products of a specific seller
+  # Give access to cart to all the products of that seller
+  # Get the latest profile of current user
   def sellers_product_list
     seller_id = params[:seller_id]
     @products = Product.where(seller_id: seller_id)

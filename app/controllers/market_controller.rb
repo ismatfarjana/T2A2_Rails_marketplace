@@ -1,6 +1,6 @@
 class MarketController < ApplicationController
   #home controller for static homepage of marketplace
-  # before_action :authenticate_user!
+  # Get current users profile link as My PROFILE on each page of the navigation
   before_action :hold_profile
   def home
 
@@ -29,10 +29,6 @@ class MarketController < ApplicationController
     @user = current_user
   end
 
-  # def hold_product
-  #   @product = Product.where(seller_id: current_user.id).first
-  #   @user = current_user
-  # end
 
 
 end

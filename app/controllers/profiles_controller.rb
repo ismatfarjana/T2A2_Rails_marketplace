@@ -2,68 +2,54 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # GET /profiles
-  # GET /profiles.json
+  # Get all users in the community page
+  # Get current users latest profile
   def index
     @profiles = Profile.all
     @profile = Profile.where(user: current_user).last
   end
 
-  # GET /profiles/1
-  # GET /profiles/1.json
+
+  # Get current users latest profile
   def show
     @profile = Profile.where(user: current_user).last
   end
 
-  # GET /profiles/new
+  # Initialize a profile
   def new
     @profile = Profile.new
 
   end
 
-  # GET /profiles/1/edit
+  # GET current users latest profile
   def edit
     @profile = Profile.where(user: current_user).last
   end
 
-  # POST /profiles
-  # POST /profiles.json
+  # Create a new profile with current user
   def create
     @profile = Profile.new(profile_params.merge({user: current_user}))
 
-    respond_to do |format|
-      if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
-        format.json { render :show, status: :created, location: @profile }
-      else
-        format.html { render :new }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
+    if @profile.save
+      redirect_to @profile, notice: 'Profile was successfully created.'
+    else
+      format.html { render :new }
     end
   end
 
-  # PATCH/PUT /profiles/1
-  # PATCH/PUT /profiles/1.json
+  # Update current users latest profile
   def update
-    respond_to do |format|
-      if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
-        format.json { render :show, status: :ok, location: @profile }
-      else
-        format.html { render :edit }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
+    if @profile.update(profile_params)
+      redirect_to @profile, notice: 'Profile was successfully updated.'
+    else
+      render :edit
     end
   end
 
-  # DELETE /profiles/1
-  # DELETE /profiles/1.json
+  # Destroy current users latest profile
   def destroy
     @profile.destroy
-    respond_to do |format|
-      format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+     redirect_to profiles_url, notice: 'Profile was successfully destroyed.'
   end
 
   private
