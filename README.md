@@ -163,7 +163,7 @@ Mockup of Plantish sitemap
 ## ERD after production:
  For the perfection and the simplicity of the website, the main frame of ERD is followed strictly throughout the development process. 
  One exception: Initially I wanted to use AWS API to save the image as string in my database. Later I used Active storage to save the images in AWS S3 bucket.
- Future improvement plan: order_items table was created for giving sellers the access to manage order from each seller, which is under the future improvement plan.
+ Future improvement plan: order_items table was created for processing the payment(done) and giving sellers the access to manage order from each seller(under the future improvement plan).
  
 
 
