@@ -1,33 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="all_heading"><%= @profile.first_name.capitalize %>'s Order list</div>
+<div class="all_heading"><%= @profile.first_name.capitalize %>'s Order Confirmation</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Buyer</th>
-      <th>Paid</th>
-      <th>Amount</th>
-      <th>Fulfilled</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.buyer.profile.first_name.capitalize %></td>
-        <td><%= order.paid %></td>
-        <td>AUD $<%= order.amount %></td>
-<!--        <td><%#= order.fulfilled %></td>-->
-<!--        <td><%#= link_to 'Show', order %></td>-->
-<!--        <td><%#= link_to 'Edit', edit_order_path(order) %></td>-->
-<!--        <td><%#= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%#= link_to 'New Order', new_order_path %>
+Payment of AUD $<%= @orders.last.amount %> is successful.<br />
+We will process your order within 2 business days<br /><br /><br />
+Thank you <strong><%= @orders.last.buyer.profile.first_name.capitalize %></strong> for shopping at Plantish
+
+
