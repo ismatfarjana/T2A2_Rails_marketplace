@@ -10,34 +10,32 @@
 
 ---
 
-## Introduction:
+## Introduction
 Plantish is a two-way unique marketplace app for selling and buying garden grown fruits, vegetables, seeds, seedlings, renting or gardening tools and more.
 
-## Problem I am trying to solve:
+## Problem I am trying to solve
  
 As a gardener myself I Have grown a lot of fresh vegetables sometimes that could not be stored or consumed. So the idea of building a platform to sell those extra fresh grown foods came to my mind. It also allows sellers to sell the seedlings they don't have enough space to grow. They can sell grafted small plants. Also, having the pandemic situation on, the aggravated need of fresh fruits and vegetables can easily managed if we can get them from each other by maintaining the safety protocols.
 
-## Why:
+## Why
 
 Rather than letting the extra harvest go waste Plantish will give the opportunity to sell them in the neighbourhood. It will also create an extra source of income for the gardener. It will also create a community bonding among the gardeners.
-
 
 ---
 
 ## Setup on Local Machine
 
-* Clone repository
-* Navigate into app folder
+* Clone repository by running `git clone git@github.com:ismatfarjana/T2A2_Rails_marketplace.git`
+* Navigate into app folder by running `cd T2A2_Rails_marketplace`
 * Make sure you have config variable for Stripe, AWS S3
-* run bundle install
-* run postgresql on local mechine
-* run db:setup
-* run rails db:migrate
-* run rails server
-* Type localhost:3000 on your favourite browser to see the project in action
+* run `bundle install`
+* run `postgresql` on local mechine
+* run `rails db:setup`
+* run `rails db:migrate`
+* run `rails server`
+* Type `localhost:3000` on your favourite browser to see the project in action
 
 ---
-
 
 ## Description
 
@@ -73,7 +71,7 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - Devise
 
 
- **DevOps**
+ **Tools**
   - RubyMine
   - Git
   - Github
@@ -120,10 +118,15 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
  ---
 
 ## Sitemap:
+
+<details>
+    <summary>Click here to expand</summary>
+    
 Mockup of Plantish sitemap
 ![](https://i.imgur.com/jRFRqhj.jpg)
 
 Main Sitemaps:
+
 
 
 | user status | sitemap | 
@@ -131,6 +134,11 @@ Main Sitemaps:
 |  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
 | logged in(no profile created) | ![](https://i.imgur.com/tycWfIF.png) |
 | logged in(profile created) | ![](https://i.imgur.com/wFhqBty.png) |
+
+</details>
+
+
+
 
 
 
@@ -141,7 +149,9 @@ Main Sitemaps:
 ## Screenshots
 
 
-
+<details>
+    <summary>Click here to expand</summary>
+    
 
 
 | Screenshots         |                Mobile                | Tablet                               | Desktop                              |
@@ -160,6 +170,10 @@ Main Sitemaps:
 | Contact us          |                 Text                 | Text                                 | ----                                 |
 
 
+</details>
+
+
+
 
 
 
@@ -168,7 +182,8 @@ Main Sitemaps:
 
 ## Wireframes
 
-
+<details>
+    <summary>Click here to expand</summary>
 
 | Different screens | Wireframes |  
 | -------- | -------- | 
@@ -176,7 +191,7 @@ Main Sitemaps:
 | **Tablet** | ![](https://i.imgur.com/iXjhuTR.png) |
 | **Mobile phone** | ![](https://i.imgur.com/TkneKiL.png) |
 
-
+</details>
 
 
 
@@ -397,17 +412,23 @@ Carts:
 
 ---
 
-### Task Allocation and Tracking
+## Task Allocation and Tracking
 
 
-
+<details>
+    <summary>Click here to expand</summary>
+    
 The process is tracked by trello:
+
 ![](https://i.imgur.com/7FsujXP.jpg)
 ![](https://i.imgur.com/NNYHz1O.jpg)
 ![](https://i.imgur.com/7R7NJCX.jpg)
 
 **[Link to Trello](https://trello.com/b/t3Gl2Y4D/t2a2rails-app)**
 To have access to the Trello board send me a request.
+</details>
+
+
 
 
 ---
@@ -424,7 +445,7 @@ To have access to the Trello board send me a request.
 
 
 
-Manual testing and Bug fixing
+## Manual testing and Bug fixing
 
 |  Bug        | Cause      | Solution   | Future plan   |
 | ----------- | ----------- | ----------- | -------|
@@ -434,18 +455,18 @@ Manual testing and Bug fixing
 | Add to cart button on each product show not working, giving error, param was showing empty| the cart was not having the access of the product id from the show page, which is mandatory to add that specific product to cart | product_id access to add to cart button  added | - |
 
 
-Scope of making Better user experience
+## Scope of making Better user experience
 
-| Feature now | Improvement plan | 
-| -------- | -------- | 
-|**The cart** is showing **AUD$0** total with **check out** button, which is confusing to user     | Enabling the cart only when there is product added by registered user    | 
+| Feature now | Improvement plan | State |
+| -------- | -------- | --- |
+|**The cart** is showing **AUD$0** total with **check out** button, which is confusing to user     | Enabling the cart only when there is product added by registered user    | Done |
 |**Product of <user>** showing nothing when no product is added| Need to add the button `add product` to the top and a message letting know that no product is being uploaded yet|
 | Community is only showing the information of the member | To make the community more alive by adding features like- enabling internal message sending option , adding a blog site to the community, adding status update field for the members |
 | Contact us page is currently under development | To make it properly functional with Sendgrid |
 
-| Future plan | 
-| --- |
-|Adding an Admin dashboard to administrate the whole website |
-|Giving the access to the seller to manage each order |
-|Giving the access to buyer to cancel the order |
+## Future plan  
+
+* Adding an Admin dashboard to administrate the whole website 
+* Giving the access to the seller to manage each order 
+* Giving the access to buyer to cancel the order 
 
