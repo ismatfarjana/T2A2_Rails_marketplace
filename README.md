@@ -108,6 +108,18 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 Mockup of Plantish sitemap
 ![](https://i.imgur.com/jRFRqhj.jpg)
 
+Main Sitemaps:
+
+
+
+| Not logged in | logged in(no profile created) |  logged in(profile created) |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/FZCM9wJ.png)    | ![](https://i.imgur.com/tycWfIF.png)  | ![](https://i.imgur.com/wFhqBty.png)    |
+
+
+
+
+
 
 ---
 
@@ -141,17 +153,15 @@ Mockup of Plantish sitemap
 
 ## Wireframes
 
-### Desktop:
-![](https://i.imgur.com/8oaoLOY.png)
-
-### Tab:
-![](https://i.imgur.com/EQurPBc.png)
 
 
+| Different screens | Wireframes |  
+| -------- | -------- | 
+| **Desktop**    | ![](https://i.imgur.com/IFP0cKu.png)    | 
+| **Tablet** | ![](https://i.imgur.com/iXjhuTR.png) |
+| **Mobile phone** | ![](https://i.imgur.com/TkneKiL.png) |
 
-### Mobile phone:
 
-![](https://i.imgur.com/uKdWDSc.png)
 
 
 
@@ -163,7 +173,7 @@ Mockup of Plantish sitemap
 ## ERD after production:
  For the perfection and the simplicity of the website, the main frame of ERD is followed strictly throughout the development process. 
  One exception: Initially I wanted to use AWS API to save the image as string in my database. Later I used Active storage to save the images in AWS S3 bucket.
- Future improvement plan: order_items table was created for processing the payment(done) and giving sellers the access to manage order from each seller(under the future improvement plan).
+ Future improvement plan: order_items table was created for giving sellers the access to manage order from each seller, which is under the future improvement plan.
  
 
 
@@ -209,6 +219,9 @@ This community holds all the registered users' contact information so they can c
 ## Database
 ### Active Record Model Relationships
 
+<details>
+    <summary>Click here to expand</summary>
+    
 #### An User:
  * has_one profile, a profile belongs_to a user
  * has_many products, a product belongs_to a seller( under the class user)
@@ -255,11 +268,22 @@ This community holds all the registered users' contact information so they can c
 
 
 
+
+
+</details>
+
+
+
+
 ---
 
 ### Database Relations Implementation
 
- #### User
+
+<details>
+    <summary>Click here to expand</summary>
+    
+#### User
  
   ![](https://i.imgur.com/oEy6Wju.png)
   
@@ -293,11 +317,20 @@ This community holds all the registered users' contact information so they can c
   ![](https://i.imgur.com/71oEpVI.png)
 * cart holds the product_id and the buyer_id as foreign keys.
  
+
+
+
+</details>
+
+ 
  
 ---
 
 ### Database Schema Design
 
+<details>
+    <summary>Click here to expand</summary>
+    
 Users:
 * email: string
 * encryped_password: string
@@ -338,6 +371,12 @@ OrderItems:
 Carts:
 * product_id: references
 * buyer_id: references
+
+
+
+</details>
+
+
 
 
 
