@@ -24,6 +24,21 @@ Rather than letting the extra harvest go waste Plantish will give the opportunit
 
 ---
 
+## Setup on Local Machine
+
+* Clone repository
+* Navigate into app folder
+* Make sure you have config variable for Stripe, AWS S3
+* run bundle install
+* run postgresql on local mechine
+* run db:setup
+* run rails db:migrate
+* run rails server
+* Type localhost:3000 on your favourite browser to see the project in action
+
+---
+
+
 ## Description
 
 ### Purpose
