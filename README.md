@@ -111,11 +111,11 @@ Mockup of Plantish sitemap
 Main Sitemaps:
 
 
-
-| Not logged in | logged in(no profile created) |  logged in(profile created) |
-| -------- | -------- | -------- |
-| ![](https://i.imgur.com/FZCM9wJ.png)    | ![](https://i.imgur.com/tycWfIF.png)  | ![](https://i.imgur.com/wFhqBty.png)    |
-
+| user status | sitemap | 
+| -------- | -------- | 
+|  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
+| logged in(no profile created) | ![](https://i.imgur.com/tycWfIF.png) |
+| logged in(profile created) | ![](https://i.imgur.com/wFhqBty.png) |
 
 
 

@@ -8,15 +8,16 @@ class ProductsController < ApplicationController
     @profile = Profile.where(user: current_user).last
   end
 
-  # Get current users latest profile
+  # Get current users latest profile as "My profile" link in navigation bar
   # Initialise a Cart
+  # show each product
   def show
     @profile = Profile.where(user: current_user).last
     @cart = Cart.new
   end
 
   # Initialise a product
-  # Get current users latest profile
+  # Get current users latest profile as "My profile" link in navigation bar
   def new
     @product = Product.new
     @profile = Profile.where(user: current_user).last
