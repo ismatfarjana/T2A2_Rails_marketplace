@@ -122,17 +122,19 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 <details>
     <summary>Click here to expand</summary>
     
-Mockup of Plantish sitemap
+### Mockup of Plantish sitemap
+
 ![](https://i.imgur.com/jRFRqhj.jpg)
 
-Main Sitemaps:
+### Main Sitemaps:
 
 
 
 | user status | sitemap | 
 | -------- | -------- | 
 |  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
-| logged in(no profile created) | ![](https://i.imgur.com/tycWfIF.png) |
+| logged in(no profile created) | ![](https://i.imgur.com/tMGcYUb.png)
+ |
 | logged in(profile created) | ![](https://i.imgur.com/wFhqBty.png) |
 
 </details>
