@@ -29,7 +29,7 @@ Rather than letting the extra harvest go waste Plantish will give the opportunit
 * Navigate into app folder by running `cd T2A2_Rails_marketplace`
 * Make sure you have config variable for Stripe, AWS S3
 * run `bundle install`
-* run `postgresql` on local mechine
+* run `postgresql` on local machine
 * run `rails db:setup`
 * run `rails db:migrate`
 * run `rails server`
@@ -84,7 +84,7 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 #### As an user:
   - I want to login to my account.
   - I want to edit my login settings
-  - I want to create an account, so that I can make a profile so my location and other informations stay saved in my profile
+  - I want to create an account, so that I can make a profile so my location and other information stay saved in my profile
   - I want to edit my profile
   - I want to delete my profile
   - I want to have the access to the private community group
@@ -117,20 +117,20 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
  
  ---
 
-## Sitemap:
+## Site map:
 
 <details>
     <summary>Click here to expand</summary>
     
-### Mockup of Plantish sitemap
+### Mock up of Plantish site map
 
 ![](https://i.imgur.com/jRFRqhj.jpg)
 
-### Main Sitemaps:
+### Main Site maps:
 
 
 
-| user status | sitemap | 
+| user status | site map | 
 | -------- | -------- | 
 |  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
 | logged in(no profile created) | ![](https://i.imgur.com/tMGcYUb.png)
@@ -249,7 +249,7 @@ This community holds all the registered users' contact information so they can c
 ---
 
 ## Database
-### Active Record Model Relationships
+## Active Record Model Relationships
 
 <details>
     <summary>Click here to expand</summary>
@@ -309,7 +309,7 @@ This community holds all the registered users' contact information so they can c
 
 ---
 
-### Database Relations Implementation
+## Database Relations Implementation
 
 
 <details>
@@ -358,7 +358,7 @@ This community holds all the registered users' contact information so they can c
  
 ---
 
-### Database Schema Design
+## Database Schema Design
 
 <details>
     <summary>Click here to expand</summary>
@@ -420,7 +420,7 @@ Carts:
 <details>
     <summary>Click here to expand</summary>
     
-The process is tracked by trello:
+The process is tracked by Trello :
 
 ![](https://i.imgur.com/7FsujXP.jpg)
 ![](https://i.imgur.com/NNYHz1O.jpg)
@@ -434,9 +434,55 @@ To have access to the Trello board send me a request.
 
 
 ---
+## Query Implementation with Comments
+
+Query implementation with comments in **transactions_controller**:
+
+![](https://i.imgur.com/ndJJDbh.png)
 
 
 
+---
+
+## Sanitise and validates input to maintain data integrity
+
+<details>
+    <summary> Click here to expand </summary>
+
+ ### Profile
+
+  * **Sanitization**:
+  Sanitization of user input by permitting specific keys in profile_params
+  ![](https://i.imgur.com/h9zcT2z.png)
+
+  * **Validation**:
+   Validating different field of the profiles table
+  ![](https://i.imgur.com/fm74hzE.png)
+
+  
+
+ ### Product
+
+  * **Sanitization**:
+  Sanitization of user input by permitting specific keys in product_params
+  ![](https://i.imgur.com/cV617ZC.png)
+
+  * **Validation**:
+  Validating different field of the products table
+  ![](https://i.imgur.com/9hdoun2.png)
+  
+
+  
+ ### Cart
+
+  * **Sanitization**:
+  Sanitization of user input by permitting specific keys in cart_params
+  ![](https://i.imgur.com/JuEkZcA.png)
+  * **Validation**:
+   Validating different field of the carts table
+  ![](https://i.imgur.com/48hejmi.png)
+
+</details>
 ---
 
 
