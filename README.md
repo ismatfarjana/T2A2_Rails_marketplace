@@ -88,6 +88,10 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - DBDESIGNER
   - Trello
   - Balsamiq
+
+  
+ **Test**
+  - Rspec
   
   </details>  
 
@@ -527,7 +531,19 @@ Query implimentation with comments in **transactions_controller**:
 
 
 
+## Rspec Unit Test
 
+<details>
+    <summary>Click here to expand</summary>
+    
+* **Product**
+
+    Added products_controller unit test for testing create action
+    
+    ![](https://i.imgur.com/41aXQcZ.png)
+
+    
+</details>    
 
 
 
