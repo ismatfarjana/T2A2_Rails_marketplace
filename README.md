@@ -25,31 +25,40 @@ Rather than letting the extra harvest go waste Plantish will give the opportunit
 
 ## Setup on Local Machine
 
+<details>
+    <summary>Click here to expand</summary>
+
 * Clone repository by running `git clone git@github.com:ismatfarjana/T2A2_Rails_marketplace.git`
 * Navigate into app folder by running `cd T2A2_Rails_marketplace`
 * Make sure you have config variable for Stripe, AWS S3
 * run `bundle install`
-* run `postgresql` on local machine
+* run `postgresql` on local mechine
 * run `rails db:setup`
 * run `rails db:migrate`
 * run `rails server`
 * Type `localhost:3000` on your favourite browser to see the project in action
 
+</details>
+
 ---
 
 ## Description
 
-### Purpose
+## Purpose
 The purpose of Plantish is to create a place to let anyone sell their garden related product and also allow other people to buy it.
 
-### Target audience
+## Target audience
   - Age range: 20+
   - Gender: All
   - Living in house with backyard / space to do gardening
   - Living in a suburb away from main city
   - Looking for fresh home grown vegetables, fruits, plants, seedlings, seeds, garden tools, indoor plants, terrariums and succulents.
 
-### Tech stack
+## Tech stack
+
+<details>
+    <summary>Click here to expand</summary>
+
   **Frontend:**
   - HTML
   - CSS
@@ -79,12 +88,18 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - DBDESIGNER
   - Trello
   - Balsamiq
+  
+  </details>  
 
-### User stories
+## User stories
+
+<details>
+    <summary>Click here to expand</summary>
+
 #### As an user:
   - I want to login to my account.
   - I want to edit my login settings
-  - I want to create an account, so that I can make a profile so my location and other information stay saved in my profile
+  - I want to create an account, so that I can make a profile so my location and other informations stay saved in my profile
   - I want to edit my profile
   - I want to delete my profile
   - I want to have the access to the private community group
@@ -102,7 +117,13 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 - I want to add my product details
 - I want to edit my product details
 
-### Functionality
+</details>
+
+## Functionality
+
+<details>
+    <summary>Click here to expand</summary>
+
  #### User Profile: 
   The site visitor can create a profile with information (profile picture, email address, password, phone number, name, address, postcode, suburb) in order to add products to their product list and to add product to the cart in order to buy it. It also gives access to the registered user to the Plantish community where they can find other members as well. The visitor who doesn't have created any profile is allowed to browse the website.
   
@@ -114,23 +135,25 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
  
  #### Payment:
   After the product is added to cart buyers can see their chosen product list in the cart and proceed to payment. After the payment is successful the buyer will be redirected to the paid order list. (The payment system is on demo mode at this moment. To have a test run follow the instruction shown in the cart page)
- 
+
+</details>
+
  ---
 
-## Site map:
+## Sitemap:
 
 <details>
     <summary>Click here to expand</summary>
     
-### Mock up of Plantish site map
+### Mockup of Plantish sitemap
 
 ![](https://i.imgur.com/jRFRqhj.jpg)
 
-### Main Site maps:
+### Main Sitemaps:
 
 
 
-| user status | site map | 
+| user status | sitemap | 
 | -------- | -------- | 
 |  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
 | logged in(no profile created) | ![](https://i.imgur.com/tMGcYUb.png)|
@@ -199,6 +222,11 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 ---
 
 ## ERD(entity relationship diagram) for Plantish:
+
+<details>
+    <summary>Click here to expand</summary>
+
+## ERD before production:
   ![](https://i.imgur.com/j24CU5P.png)
 
 ## ERD after production:
@@ -206,13 +234,15 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
  One exception: Initially I wanted to use AWS API to save the image as string in my database. Later I used Active storage to save the images in AWS S3 bucket.
  Future improvement plan: order_items table was created for giving sellers the access to manage order from each seller, which is under the future improvement plan.
  
-
+ </details>
 
 ---
 
 
 ## High-level Components (Abstractions)
 
+<details>
+    <summary>Click here to expand</summary>
 
 ### User: 
  User is the first component of this app. An user will be able to browse all the categories and see all the products.
@@ -232,10 +262,16 @@ This community holds all the registered users' contact information so they can c
 ### Payment
  The payment system will allow the buyer to pay for the items. (This stage is under construction, a demo code is given to test the functionality of the infrastructure of the payment system)
 
+</details>
+
 ---
 
 
 ## Third party services used in Plantish:
+
+<details>
+    <summary>Click here to expand</summary>
+
  ### Heroku: 
  Plantish gardener market place needs a deploying platform . I have used Heroku for that. Heroku is a cloud based platform which allows the developer to build, run, and operate applications.
  
@@ -244,7 +280,9 @@ This community holds all the registered users' contact information so they can c
  
  ### Stripe:  
  While selling and buying the product, a payment system is mandatory too. I am using Stripe to make the payment structure. At this moment this part is on demo/test mode. 
- 
+
+</details>
+
 ---
 
 ## Database
@@ -419,7 +457,7 @@ Carts:
 <details>
     <summary>Click here to expand</summary>
     
-The process is tracked by Trello :
+The process is tracked by trello:
 
 ![](https://i.imgur.com/7FsujXP.jpg)
 ![](https://i.imgur.com/NNYHz1O.jpg)
@@ -433,22 +471,24 @@ To have access to the Trello board send me a request.
 
 
 ---
-## Query Implementation with Comments
+## Query Implimentation with Comments
 
-Query implementation with comments in **transactions_controller**:
+<details>
+    <summary>Click here to expand</summary>
+
+Query implimentation with comments in **transactions_controller**:
 
 ![](https://i.imgur.com/ndJJDbh.png)
 
-
+</details>
 
 ---
 
 ## Sanitise and validates input to maintain data integrity
-
 <details>
-    <summary> Click here to expand </summary>
+    <summary>Click here to expand</summary>
 
- ### Profile
+### Profile
 
   * **Sanitization**:
   Sanitization of user input by permitting specific keys in profile_params
@@ -460,7 +500,7 @@ Query implementation with comments in **transactions_controller**:
 
   
 
- ### Product
+### Product
 
   * **Sanitization**:
   Sanitization of user input by permitting specific keys in product_params
@@ -472,7 +512,7 @@ Query implementation with comments in **transactions_controller**:
   
 
   
- ### Cart
+### Cart
 
   * **Sanitization**:
   Sanitization of user input by permitting specific keys in cart_params
@@ -494,6 +534,9 @@ Query implementation with comments in **transactions_controller**:
 
 ## Manual testing and Bug fixing
 
+<details>
+    <summary>Click here to expand</summary>
+
 |  Bug        | Cause      | Solution   | Future plan   |
 | ----------- | ----------- | ----------- | -------|
 | `Add to cart` page breaks the app when the user is not logged in.| ERD : Cart is connected to db with user_id and product_id, so if there is no user logged in it is breaking the app on production when trying to add product to cart  | The structure of my ERD is fully based on DATABASE. I did my research and found out that it needs Javascript skill to add the product temporarily in cart. For now, I fixed this bug by disabling the `add to cart` button for users who are not logged in or signed in.     | Enabling the  local cart with script |
@@ -501,8 +544,12 @@ Query implementation with comments in **transactions_controller**:
 |**Mobile number** is taking everything in the form| mobile_number is been saved in the db as string | I designed mobile_number to save as `string` in the database because it is not used for any kind of calculation. So the solution for this problem will be setting a validation on `Profile` model with **Regex** to allow only 10 numeric digits | -
 | Add to cart button on each product show not working, giving error, param was showing empty| the cart was not having the access of the product id from the show page, which is mandatory to add that specific product to cart | product_id access to add to cart button  added | - |
 
+</details>
 
 ## Scope of making Better user experience
+
+<details>
+    <summary>Click here to expand</summary>
 
 | Feature now | Improvement plan | State |
 | -------- | -------- | --- |
@@ -510,6 +557,9 @@ Query implementation with comments in **transactions_controller**:
 |**Product of <user>** showing nothing when no product is added| Need to add the button `add product` to the top and a message letting know that no product is being uploaded yet|
 | Community is only showing the information of the member | To make the community more alive by adding features like- enabling internal message sending option , adding a blog site to the community, adding status update field for the members |
 | Contact us page is currently under development | To make it properly functional with Sendgrid |
+
+</details>
+
 
 ## Future plan  
 
