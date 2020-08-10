@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # Get current users products
-  # Get current users latest profile
+  # Get current users latest profile latest profile as "My profile" link in navigation bar
   def index
     @products = Product.where(seller_id: current_user.id)
     @profile = Profile.where(user: current_user).last

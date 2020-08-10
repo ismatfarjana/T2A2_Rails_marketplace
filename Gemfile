@@ -32,6 +32,9 @@ gem 'devise', '~> 4.2'
 # fow aws s3 bucket
 gem "aws-sdk-s3", require: false
 
+# for BDD
+gem 'rspec-rails'
+
 
 
 # Use Active Storage variant
@@ -60,6 +63,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'database_cleaner'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
