@@ -100,26 +100,30 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 <details>
     <summary>Click here to expand</summary>
 
-#### As an user:
-  - I want to login to my account.
-  - I want to edit my login settings
-  - I want to create an account, so that I can make a profile so my location and other informations stay saved in my profile
-  - I want to edit my profile
-  - I want to delete my profile
-  - I want to have the access to the private community group
+#### User:
+  - As an user, I want to create an Account and log in 
+  - As an user, I want to have the access to the authorised parts of the website.
+  - As an user, I want to edit aaccount
+  - As an user, I want to make a profile so my location and other informations stay saved in my profile
+  - As an user, I want to edit my profile
+  - As an user, I want to delete my profile
+  - As an user, I want to have the access to the private community group
   
  
  
-#### As a buyer:
+#### Buyer:
+
+  - As a buyer, I want to look for product by category
+  - As a buyer, I want to add the product to the cart
+  - As a buyer, I want to buy a product 
+  - As a buyes, I want to pay for the product I buy
+  - As a buyer, I want to see the list of my confirmed ordered products after payment is done
  
-  - I want to buy a product by adding the product to the cart and finishing payment
- -  I want to look for product by category
- - I want to see the list of my confirmed ordered products after payment is done
+#### Seller:
  
-#### As a seller:
- 
-- I want to add my product details
-- I want to edit my product details
+- As a seller, I want to add my product details
+- As a seller, I want to edit my product details
+- As a seller, I want to delete my product if not available any more
 
 </details>
 
