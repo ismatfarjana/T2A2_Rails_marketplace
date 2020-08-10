@@ -522,6 +522,7 @@ Query implimentation with comments in **transactions_controller**:
   ![](https://i.imgur.com/48hejmi.png)
 
 </details>
+
 ---
 
 
