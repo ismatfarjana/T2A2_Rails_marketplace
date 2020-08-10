@@ -133,8 +133,7 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 | user status | site map | 
 | -------- | -------- | 
 |  Not logged in    | ![](https://i.imgur.com/FZCM9wJ.png)    |
-| logged in(no profile created) | ![](https://i.imgur.com/tMGcYUb.png)
- |
+| logged in(no profile created) | ![](https://i.imgur.com/tMGcYUb.png)|
 | logged in(profile created) | ![](https://i.imgur.com/wFhqBty.png) |
 
 </details>
