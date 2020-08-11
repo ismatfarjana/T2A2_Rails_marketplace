@@ -77,23 +77,32 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - Heroku
 
  **Utilities**
-  - AWS S3
+  - AWS S3 
+   -- upload images
   - Stripe
+   -- process payment 
   - Devise
+   -- user authentication
 
 
  **Tools**
-  - RubyMine
+  - RubyMine 
+   -- as text editor
   - Git
   - Github
-  - Lucid chart
-  - DBDESIGNER
-  - Trello
-  - Balsamiq
+  - Lucid chart 
+   -- create site map
+  - DBDESIGNER 
+   -- create ERD
+  - Trello 
+   -- tracking development of website
+  - Balsamiq 
+   -- create wireframes
 
   
  **Test**
-  - Rspec
+  - Rspec 
+  -- unit test
   
   </details>  
   
