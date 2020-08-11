@@ -15,7 +15,7 @@ Plantish is a two-way unique marketplace app for selling and buying garden grown
 
 ## Problem I am trying to solve
  
-As a gardener myself I Have grown a lot of fresh vegetables sometimes that could not be stored or consumed. So the idea of building a platform to sell those extra fresh grown foods came to my mind. It also allows sellers to sell the seedlings they don't have enough space to grow. They can sell grafted small plants. Also, having the pandemic situation on, the aggravated need of fresh fruits and vegetables can easily managed if we can get them from each other by maintaining the safety protocols.
+As a gardener myself I Have grown a lot of fresh vegetables sometimes that could not be stored or consumed. So the idea of building a platform to sell those extra fresh grown foods came to my mind. It also allows sellers to sell the seedlings they don't have enough space to grow. They can sell grafted small plants. Also, having the pandemic situation on, the aggravated need of fresh fruits and vegetables can easily be managed if we can get them from each other by maintaining the safety protocols.
 
 ## Why
 
@@ -28,15 +28,15 @@ Rather than letting the extra harvest go waste Plantish will give the opportunit
 <details>
     <summary>Click here to expand</summary>
 
-* Clone repository by running `git clone git@github.com:ismatfarjana/T2A2_Rails_marketplace.git`
-* Navigate into app folder by running `cd T2A2_Rails_marketplace`
-* Make sure you have config variable for Stripe, AWS S3
+* clone repository by running `git clone git@github.com:ismatfarjana/T2A2_Rails_marketplace.git`
+* navigate into app folder by running `cd T2A2_Rails_marketplace`
+* update config/database.yml with your postgresql username & password
+* update config/credentials.yml with your variable for Stripe, AWS S3
 * run `bundle install`
-* run `postgresql` on local mechine
 * run `rails db:setup`
 * run `rails db:migrate`
 * run `rails server`
-* Type `localhost:3000` on your favourite browser to see the project in action
+* type `localhost:3000` on your favourite browser to see the project in action
 
 </details>
 
@@ -53,6 +53,8 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - Living in house with backyard / space to do gardening
   - Living in a suburb away from main city
   - Looking for fresh home grown vegetables, fruits, plants, seedlings, seeds, garden tools, indoor plants, terrariums and succulents.
+  
+  ---
 
 ## Tech stack
 
@@ -65,8 +67,8 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - ERB
 
  **Backend**
-  - Ruby
-  - Ruby on Rails
+  - Ruby 2.6.3
+  - Ruby on Rails ~> 6.0.3, >= 6.0.3.2
 
  **Database**
   - Postgresql
@@ -94,57 +96,115 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
   - Rspec
   
   </details>  
+  
+  ---
 
 ## User stories
 
 <details>
     <summary>Click here to expand</summary>
 
-#### User:
-  - As an user, I want to create an Account and log in 
-  - As an user, I want to have the access to the authorised parts of the website.
-  - As an user, I want to edit aaccount
-  - As an user, I want to make a profile so my location and other informations stay saved in my profile
-  - As an user, I want to edit my profile
-  - As an user, I want to delete my profile
-  - As an user, I want to have the access to the private community group
+#### As an user:
+  - I want to create an Account and log in 
+  - I want to have access to the authorised parts of the website.
+  - I want to edit account
+  - I want to make a profile so my location and other informations stay saved in my profile
+  - I want to edit my profile
+  - I want to delete my profile
+  - I want to have the access to the private community group
   
  
  
-#### Buyer:
+#### As a buyer:
 
-  - As a buyer, I want to look for product by category
-  - As a buyer, I want to add the product to the cart
-  - As a buyer, I want to buy a product 
-  - As a buyes, I want to pay for the product I buy
-  - As a buyer, I want to see the list of my confirmed ordered products after payment is done
+  - I want to look for product by category
+  - I want to add the product to the cart
+  - I want to buy a product 
+  - I want to pay for the product I buy
+  - I want to see the list of my confirmed ordered products after payment is done
  
-#### Seller:
+#### As a seller:
  
-- As a seller, I want to add my product details
-- As a seller, I want to edit my product details
-- As a seller, I want to delete my product if not available any more
+- I want to add my product details
+- I want to edit my product details
+- I want to delete my product if not available any more
 
 </details>
+
+---
 
 ## Functionality
 
 <details>
     <summary>Click here to expand</summary>
 
- #### User Profile: 
+ ### User Profile: 
   The site visitor can create a profile with information (profile picture, email address, password, phone number, name, address, postcode, suburb) in order to add products to their product list and to add product to the cart in order to buy it. It also gives access to the registered user to the Plantish community where they can find other members as well. The visitor who doesn't have created any profile is allowed to browse the website.
   
-####  Product list:
- Registered users can upload products to "My PRODUCT" list. Users can specify the type of product from the category selection option( seeds, seedlings, vegetables, fruits, flowers, indoor plants, succulents, terrariums, small plants, garden tools) in the form. Users will fix the price for each product . The amount of the selling product is also fixed by the user(seller). ***IF THE PRODUCT IS SOLD ALREADY THE SELLER CAN DELETE THE PRODUCT FROM THE PRODUCT LIST***
+  **To create profile**
+   - user needs to sign up an account and log in to the account
+   - after logging is, user needs to click on **Add Profile** on the *navigation bar* which will take the registered user to the **new profile form**
+   - after submitting the form with required information the registered user will be redirected to **My Profile** page, where all the information added by the user will be displayed.
+   - **My profile** page also includes **Edit Profile** button which will take the profile holder to edit their profile page.
+   
+   **What is happening under the hood**
+   - after registering/ signing up into the website
+    -- a new user instance is created in the **users_table**
+   - after creating profile
+    -- a new profile profile instance is created in the **profiles_table**
+   - **profiles_table** is connected to the users_table with foreign_key which is the primary key of the **users_table** 
+    
+  
+###  Product list:
+ Only a Registered user can upload products to "My PRODUCT" list as a seller. Sellers can specify the type of product from the category selection option( seeds, seedlings, vegetables, fruits, flowers, indoor plants, succulents, terrariums, small plants, garden tools) in the form. Seller will fix the price for each product . The amount of the selling product is also fixed by the user(seller). *IF THE PRODUCT IS SOLD ALREADY THE SELLER CAN DELETE THE PRODUCT FROM THE PRODUCT LIST*
+
+**To add product**
+- seller needs to own a profile with the informations required
+- **My products** option creates when user creates a profile
+- in **My products** page there is a **Add product** button to take the profile holder to add a new product form.
+- after submitting all the required information of the product, the user will be redirected to a newly added product showing page.
+     
+**What is happening under the hood**  
+- after submitting the product with all informations, a new product instance is created in products_table
+- after adding the product
+-- product belongs_to 
+--- the seller until it has been sold
+--- the buyer when it is sold
+
+
+     
  
-#### Private Community:
- Only a registered user will have the access to the private community of this website.  
+### Private Community:
+ Only a registered user will have the access to the private community of this website. 
+- registered user can
+ -- see other members of the community
+ -- see the uploader products of other members of the community
+ -- see the contact information of other members of the community
  
- #### Payment:
+ 
+ ### Payment with Stripe:
   After the product is added to cart buyers can see their chosen product list in the cart and proceed to payment. After the payment is successful the buyer will be redirected to the paid order list. (The payment system is on demo mode at this moment. To have a test run follow the instruction shown in the cart page)
+  
+**The process of payment**
+- at the **cart** page , clicking the **pay with card** button will take buyer to add card details page
+- after adding and submitting the credit card number (test mood: card number 4242 4242 4242 4242), date(enter any future date) and the cvv (test mood: cvv - enter any three digits number), buyer will be redirected to the order fulfill message page.
+
+**What is happening here** 
+- after clicking on pay amount button on browser it sends a **post** request to routes , which finds the create action in **transactions_controller** 
+- here, using the **Stripe** API keys, a *new customer* and *charge* is been created 
+- a new Order instance is created in **orders_table** 
+- *order_item* is created in orderItem table to hold and save the orders items of the cart 
+- after saving the items, *cart* is being *destroyed* to keep buyers cart clean for next round shopping 
+- if orderitems are not been saved , the whole process is being rescued by redirecting buyer to the **carts_path** 
+- if order items are saved successfully , buyer is redirected to order confirmation page.  
+
+![](https://i.imgur.com/WOqPnKO.png)|
+
+
+
 
 </details>
+
 
  ---
 
@@ -227,22 +287,6 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
 
 
 
----
-
-## ERD(entity relationship diagram) for Plantish:
-
-<details>
-    <summary>Click here to expand</summary>
-
-## ERD before production:
-  ![](https://i.imgur.com/j24CU5P.png)
-
-## ERD after production:
- For the perfection and the simplicity of the website, the main frame of ERD is followed strictly throughout the development process. 
- One exception: Initially I wanted to use AWS API to save the image as string in my database. Later I used Active storage to save the images in AWS S3 bucket.
- Future improvement plan: order_items table was created for giving sellers the access to manage order from each seller, which is under the future improvement plan.
- 
- </details>
 
 ---
 
@@ -256,7 +300,7 @@ The purpose of Plantish is to create a place to let anyone sell their garden rel
  User is the first component of this app. An user will be able to browse all the categories and see all the products.
 
 ### Profile:
- The Profile includes information related to the registered user. One needs to create a profile in order to be able to start selling their own product or buying others item.
+ The Profile includes information related to the registered user. One needs to create a profile in order to be able to start selling their own product or buying others items.
  
 ### Plantish community
 This community holds all the registered users' contact information so they can connect to each other and make the internal bond stronger by helping each other with their gardening skills or by any means.
@@ -294,6 +338,25 @@ This community holds all the registered users' contact information so they can c
 ---
 
 ## Database
+
+## ERD(entity relationship diagram) for Plantish:
+
+<details>
+    <summary>Click here to expand</summary>
+
+## ERD before production:
+  ![](https://i.imgur.com/jhRgetd.png)
+
+
+## ERD after production:
+ For the perfection and the simplicity of the website, the main frame of ERD is followed strictly throughout the development process. 
+ One exception: Initially I wanted to use AWS API to save the image as string in my database. Later I used Active storage to save the images in AWS S3 bucket.
+ Future improvement plan: order_items table was created for giving sellers the access to manage order from each seller, which is under the future improvement plan.
+ 
+ </details>
+
+---
+
 ## Active Record Model Relationships
 
 <details>
@@ -361,8 +424,8 @@ This community holds all the registered users' contact information so they can c
     <summary>Click here to expand</summary>
     
 #### User
- 
-  ![](https://i.imgur.com/oEy6Wju.png)
+  
+  ![](https://i.imgur.com/LZRpe4N.png)
   
   * The user has more then one has_many and has_one relationship.
   * User table is connected to other tables with foreign keys.
@@ -370,28 +433,33 @@ This community holds all the registered users' contact information so they can c
 
  
  #### Profiles
- 
-  ![](https://i.imgur.com/ZbO8jJp.png)
+  
+  ![](https://i.imgur.com/quZ2qeJ.png)
 
   * The profile belongs_to a user, for that it is connected to the user table with foreign key
 
  
  #### Products
- 
-   ![](https://i.imgur.com/O3rXqFQ.png)
+   
+   ![](https://i.imgur.com/tf8aERC.png)
   * Product belongs_to user(seller) and connected to user table with foreign key.  
  
  #### Orders
  
-   ![](https://i.imgur.com/FxRR8O9.png)
+   ![](https://i.imgur.com/047RzYK.png)
 * Order belogs_to user as  seller and also as a buyers aspect. It has_many products.
  
- 
+ #### OrderItems
+   
+   ![](https://i.imgur.com/ik1Op4A.png)
+* OrderItem belongs_to product and belongs_to order
+* this table is now being used in transaction_controller to save the order items before destroying the cart
+  
  
  
  #### Carts
   
-  ![](https://i.imgur.com/71oEpVI.png)
+  ![](https://i.imgur.com/hAGgW6u.png)
 * cart holds the product_id and the buyer_id as foreign keys.
  
 
@@ -468,8 +536,14 @@ Carts:
 The process is tracked by trello:
 
 ![](https://i.imgur.com/7FsujXP.jpg)
+
 ![](https://i.imgur.com/NNYHz1O.jpg)
+
+![](https://i.imgur.com/C2vraca.jpg)
+
 ![](https://i.imgur.com/7R7NJCX.jpg)
+
+
 
 **[Link to Trello](https://trello.com/b/t3Gl2Y4D/t2a2rails-app)**
 To have access to the Trello board send me a request.
@@ -479,14 +553,20 @@ To have access to the Trello board send me a request.
 
 
 ---
-## Query Implimentation with Comments
+## Query Implementation with Comments
 
 <details>
     <summary>Click here to expand</summary>
+ 
+ 
 
-Query implimentation with comments in **transactions_controller**:
-
-![](https://i.imgur.com/ndJJDbh.png)
+| Query implementation with comments in | controller | 
+| -------- | -------- | 
+|**profiles_controller**|![](https://i.imgur.com/72NGBQJ.png)![](https://i.imgur.com/5Tg7wW5.png)|
+| **products_controller**|![](https://i.imgur.com/xsX3YmY.png)![](https://i.imgur.com/cG50DSL.png)| 
+| **carts_controller** |![](https://i.imgur.com/td1g46a.png)| 
+| **orders_controller** |![](https://i.imgur.com/jENXSLs.png)| 
+|**transactions_controller** | ![](https://i.imgur.com/ndJJDbh.png)| 
 
 </details>
 
@@ -587,4 +667,5 @@ Query implimentation with comments in **transactions_controller**:
 * Adding an Admin dashboard to administrate the whole website 
 * Giving the access to the seller to manage each order 
 * Giving the access to buyer to cancel the order 
+
 
